@@ -1,0 +1,3 @@
+# Confidential client proposal — please do not index.
+User-agent: *
+Disallow: /

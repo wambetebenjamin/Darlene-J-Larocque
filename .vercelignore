@@ -1,0 +1,5 @@
+# Keep internal notes and repo metadata out of the deployed site.
+# README.md contains pitching strategy and client-objection notes — not for the client's eyes.
+README.md
+.git
+.gitignore
