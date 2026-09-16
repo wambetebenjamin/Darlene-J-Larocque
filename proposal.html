@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Review &amp; Redesign Proposal — Master's Touch Women's Life Coaching</title>
+<meta name="description" content="A page-by-page review of mtwlifecoach.com with a practical plan to turn it into a website that books clients.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2C2230;
+    --ink-soft:#4A3D4A;
+    --plum:#5B3A54;
+    --plum-dk:#3A2436;
+    --cream:#FBF7F1;
+    --paper:#FFFFFF;
+    --sage:#7E9181;
+    --sage-dk:#54685A;
+    --gold:#C2A25E;
+    --gold-soft:#E7D8B6;
+    --blush:#F4E6DF;
+    --muted:#6E6270;
+    --line:#E8E0D6;
+    --clay:#B4593F;
+    --clay-bg:#FBEDE8;
+    --amber:#9C7420;
+    --amber-bg:#FCF4E3;
+    --ok:#4F6B52;
+    --ok-bg:#EDF3EC;
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --shadow:0 1px 2px rgba(44,34,48,.04),0 8px 24px rgba(44,34,48,.06);
+    --shadow-lg:0 2px 4px rgba(44,34,48,.05),0 24px 60px rgba(44,34,48,.10);
+    --radius:16px;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    font-size:17px;
+    line-height:1.7;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  .grain::before{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  img{max-width:100%;height:auto}
+  a{color:var(--plum)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .eyebrow{
+    font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:600;color:var(--sage-dk);margin:0 0 14px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold-soft),transparent)}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.18;letter-spacing:-.01em;margin:0 0 .5em}
+  h1{font-size:clamp(2.1rem,5.2vw,3.6rem);font-weight:500}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+  h3{font-size:clamp(1.15rem,2vw,1.4rem)}
+  h4{font-size:1.03rem;font-family:var(--sans);font-weight:600;letter-spacing:0}
+  p{margin:0 0 1.05em}
+  .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-soft);line-height:1.65}
+  .muted{color:var(--muted)}
+  .small{font-size:14.5px;line-height:1.6}
+  .tight p:last-child{margin-bottom:0}
+  strong{font-weight:650;color:var(--ink)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,247,241,.9);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 28px}
+  .brandmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+  .monogram{
+    width:38px;height:38px;flex:0 0 38px;border-radius:11px;
+    background:linear-gradient(145deg,var(--plum),var(--plum-dk));
+    color:var(--gold-soft);font-family:var(--serif);font-weight:600;font-size:17px;
+    display:grid;place-items:center;letter-spacing:.02em;
+  }
+  .brandtext{min-width:0}
+  .brandtext b{display:block;font-family:var(--serif);font-size:15.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brandtext span{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .topnav{display:flex;gap:22px;font-size:14px;font-weight:500}
+  .topnav a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+  .topnav a:hover{color:var(--plum);border-color:var(--gold)}
+  @media(max-width:900px){.topnav{display:none}}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 520px at 78% -8%,rgba(194,162,94,.22),transparent 62%),
+      radial-gradient(760px 460px at 4% 4%,rgba(126,145,129,.20),transparent 60%),
+      linear-gradient(168deg,#FFFDF9 0%,var(--cream) 46%,#F6EDE6 100%);
+    border-bottom:1px solid var(--line);
+    padding:88px 0 76px;
+  }
+  .cover .wrap{position:relative;z-index:1}
+  .kicker{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--paper);border:1px solid var(--line);border-radius:100px;
+    padding:7px 16px;font-size:12.5px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--sage-dk);box-shadow:var(--shadow);margin-bottom:26px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(194,162,94,.18)}
+  .cover h1{max-width:19ch}
+  .cover h1 em{font-style:italic;color:var(--plum);font-weight:500}
+  .cover .lead{max-width:60ch;margin-top:6px}
+  .cover-meta{
+    display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:36px;padding-top:26px;
+    border-top:1px solid var(--line);font-size:14.5px;
+  }
+  .cover-meta div span{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+  .cover-meta div b{font-weight:600}
+
+  /* ---------- Stats ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;margin-top:44px;box-shadow:var(--shadow);
+  }
+  .stat{background:var(--paper);padding:24px 22px}
+  .stat b{display:block;font-family:var(--serif);font-size:2.35rem;line-height:1;font-weight:600;color:var(--plum)}
+  .stat b.bad{color:var(--clay)}
+  .stat span{display:block;font-size:13px;color:var(--muted);margin-top:9px;line-height:1.45}
+
+  /* ---------- Cards & grids ---------- */
+  .grid{display:grid;gap:22px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow);
+  }
+  .card h3{margin-bottom:.4em}
+  .card p:last-child{margin-bottom:0}
+  .card-num{
+    font-family:var(--serif);font-size:13px;font-weight:600;letter-spacing:.1em;
+    color:var(--gold);display:block;margin-bottom:10px;text-transform:uppercase;
+  }
+  .panel{
+    background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:12px;padding:22px 26px;box-shadow:var(--shadow);margin:26px 0;
+  }
+  .panel.plum{background:var(--plum-dk);border-color:var(--plum-dk);border-left-color:var(--gold);color:#F2E9E2}
+  .panel.plum h3,.panel.plum h4{color:#fff}
+  .panel.plum a{color:var(--gold-soft)}
+  .panel.sage{background:var(--ok-bg);border-left-color:var(--sage)}
+  .panel.warn{background:var(--amber-bg);border-left-color:var(--amber)}
+
+  /* ---------- Badges ---------- */
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;padding:4px 11px;border-radius:100px;
+    border:1px solid transparent;white-space:nowrap;
+  }
+  .b-p0{background:var(--clay-bg);color:var(--clay);border-color:#EFCFC4}
+  .b-p1{background:var(--amber-bg);color:var(--amber);border-color:#EBD9AE}
+  .b-p2{background:var(--ok-bg);color:var(--ok);border-color:#D2E0D2}
+  .b-plain{background:#F4F0EA;color:var(--ink-soft);border-color:var(--line)}
+
+  /* ---------- Finding blocks ---------- */
+  .finding{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px;box-shadow:var(--shadow);margin-bottom:20px;
+  }
+  .finding-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:14px}
+  .finding-head h3{margin:0;font-size:1.22rem}
+  .finding .why{
+    background:var(--cream);border-radius:10px;padding:14px 18px;margin:16px 0 0;
+    font-size:15.5px;border:1px dashed var(--line);
+  }
+  .finding .why b{color:var(--plum)}
+  .evidence{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;
+    background:#F7F4EF;border:1px solid var(--line);border-radius:8px;padding:10px 14px;
+    color:#5A4E56;overflow-x:auto;margin:14px 0 0;white-space:nowrap;
+  }
+  ul.clean{list-style:none;padding:0;margin:0 0 1em}
+  ul.clean li{position:relative;padding-left:30px;margin-bottom:12px}
+  ul.clean li::before{
+    content:"";position:absolute;left:0;top:.52em;width:16px;height:16px;border-radius:50%;
+    background:var(--ok-bg);border:1px solid #CFE0CF;
+  }
+  ul.clean li::after{
+    content:"";position:absolute;left:5px;top:.78em;width:6px;height:3px;
+    border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg);
+  }
+  ul.x li::before{background:var(--clay-bg);border-color:#EFCFC4}
+  ul.x li::after{border-color:var(--clay)}
+  ul.plain{list-style:none;padding:0;margin:0}
+  ul.plain li{position:relative;padding-left:20px;margin-bottom:9px;font-size:15.5px}
+  ul.plain li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+  /* ---------- Tables ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:660px;font-size:15px}
+  th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{
+    font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);
+    font-weight:700;background:#FAF7F2;position:sticky;top:0;
+  }
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:#FDFBF8}
+  td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;color:#5A4E56}
+
+  /* ---------- Before / After ---------- */
+  .ba{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+  .ba-col{border-radius:var(--radius);padding:26px;border:1px solid var(--line);background:var(--paper);box-shadow:var(--shadow)}
+  .ba-col.before{background:#FCFAF7}
+  .ba-col.after{background:linear-gradient(170deg,#FFFDF9,#F7EFE7);border-color:var(--gold-soft)}
+  .ba-col h4{
+    font-family:var(--serif);font-size:1.06rem;margin-bottom:16px;padding-bottom:12px;
+    border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px;
+  }
+  .ba-col ul{list-style:none;margin:0;padding:0}
+  .ba-col li{font-size:15px;padding:9px 0 9px 22px;position:relative;border-bottom:1px dashed #EFEAE3}
+  .ba-col li:last-child{border-bottom:0}
+  .ba-col.before li::before{content:"✕";position:absolute;left:0;top:8px;color:var(--clay);font-size:12px;font-weight:700}
+  .ba-col.after li::before{content:"✓";position:absolute;left:0;top:8px;color:var(--ok);font-size:13px;font-weight:700}
+
+  /* ---------- Pricing ---------- */
+  .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:start}
+  .tier{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;height:100%;
+  }
+  .tier.featured{border:2px solid var(--gold);box-shadow:var(--shadow-lg);position:relative}
+  .tier.featured::after{
+    content:"Recommended";position:absolute;top:-13px;left:26px;background:var(--plum);
+    color:var(--gold-soft);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    padding:5px 13px;border-radius:100px;
+  }
+  .tier h3{font-size:1.24rem;margin-bottom:6px}
+  .tier .price{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--plum);line-height:1.1;margin:14px 0 4px}
+  .tier .price small{display:block;font-family:var(--sans);font-size:13px;font-weight:400;color:var(--muted);margin-top:6px}
+  .tier ul{list-style:none;margin:20px 0 24px;padding:0;font-size:14.8px;flex:1}
+  .tier li{padding:7px 0 7px 24px;position:relative;border-bottom:1px solid #F4F0EA}
+  .tier li:last-child{border-bottom:0}
+  .tier li::before{content:"✓";position:absolute;left:0;top:7px;color:var(--sage-dk);font-weight:700;font-size:13px}
+  .note{
+    font-size:13.5px;color:var(--muted);background:#F7F4EF;border-radius:8px;
+    padding:11px 14px;margin-top:18px;border:1px solid var(--line);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:var(--sans);font-size:15px;font-weight:600;text-decoration:none;
+    padding:14px 26px;border-radius:100px;border:1px solid transparent;
+    transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+    cursor:pointer;
+  }
+  .btn-primary{background:var(--plum);color:#fff;box-shadow:0 8px 20px rgba(91,58,84,.22)}
+  .btn-primary:hover{background:var(--plum-dk);transform:translateY(-1px);box-shadow:0 12px 26px rgba(91,58,84,.28)}
+  .btn-ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
+  .btn-ghost:hover{background:var(--blush)}
+  .btn-gold{background:var(--gold);color:#31241F}
+  .btn-gold:hover{background:#B08F4B}
+  .btnrow{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+
+  /* ---------- Roadmap ---------- */
+  .phases{display:grid;gap:0;margin-top:10px}
+  .phase{display:grid;grid-template-columns:118px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border-bottom:0}
+  .phase .wk{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--plum);letter-spacing:.02em}
+  .phase h4{margin-bottom:4px;font-size:1.05rem}
+  .phase p{margin:0;font-size:15.2px;color:var(--muted)}
+  @media(max-width:640px){.phase{grid-template-columns:1fr;gap:6px}}
+
+  /* ---------- Scripture / quote ---------- */
+  .quote{
+    font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.6rem);line-height:1.5;
+    font-style:italic;font-weight:400;color:var(--plum-dk);text-align:center;
+    max-width:24ch;margin:0 auto;
+  }
+  .quote cite{display:block;font-style:normal;font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dk);margin-top:18px}
+
+  /* ---------- CTA band ---------- */
+  .ctaband{
+    background:linear-gradient(150deg,var(--plum-dk),#2B1A28 65%);color:#F1E9E4;
+    border-radius:22px;padding:52px 44px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);
+  }
+  .ctaband h2{color:#fff;max-width:22ch}
+  .ctaband p{color:#DCCFD6;max-width:54ch}
+  .ctaband .btnrow{margin-top:30px}
+  @media(max-width:640px){.ctaband{padding:38px 26px;border-radius:18px}}
+
+  /* ---------- Check list (enhancement groups) ---------- */
+  .group{margin-bottom:34px}
+  .group-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .group-head h3{margin:0;font-size:1.2rem}
+  .group > p{margin-bottom:16px;color:var(--muted);font-size:15.5px}
+
+  /* ---------- Footer ---------- */
+  footer{background:#241722;color:#CDBFC7;padding:56px 0 40px;border-top:1px solid var(--plum)}
+  footer h4{color:#fff;font-size:1.05rem;font-family:var(--serif);margin-bottom:10px}
+  footer a{color:var(--gold-soft)}
+  footer .fine{font-size:13px;color:#9C8D96;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
+
+  @media(max-width:640px){
+    section{padding:54px 0}
+    .cover{padding:60px 0 52px}
+    .wrap{padding:0 20px}
+    .topbar .wrap{padding:11px 20px}
+    .finding,.card{padding:22px}
+    .stat b{font-size:2rem}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body{font-size:11.5pt;background:#fff}
+    .topbar,.btnrow,.btn{display:none !important}
+    section{padding:26px 0;page-break-inside:avoid;border-top:1px solid #ddd}
+    .cover{padding:20px 0}
+    .card,.finding,.tier,.ba-col,.ctaband,.tablewrap,.stats{box-shadow:none;page-break-inside:avoid}
+    h1{font-size:26pt}h2{font-size:17pt}h3{font-size:13pt}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;color:#777;word-break:break-all}
+    footer{background:#fff;color:#333}
+    footer h4{color:#000}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brandmark" href="#top">
+      <span class="monogram" aria-hidden="true">MT</span>
+      <span class="brandtext">
+        <b>Master's Touch Women's Life Coaching</b>
+        <span>Website review &amp; proposal</span>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Contents">
+      <a href="#letter">Note</a>
+      <a href="#summary">Summary</a>
+      <a href="#audit">Findings</a>
+      <a href="#vision">The vision</a>
+      <a href="#enhancements">Checklist</a>
+      <a href="#investment">Investment</a>
+      <a href="#next">Next step</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ COVER ============ -->
+<div class="cover grain" id="top">
+  <div class="wrap">
+    <span class="kicker"><span class="dot"></span> Prepared September 2026 &nbsp;·&nbsp; Confidential</span>
+    <h1>A website that finally carries the weight of the work <em>you</em> do.</h1>
+    <p class="lead">
+      A page-by-page review of <strong>mtwlifecoach.com</strong> — what's working, what's quietly
+      costing you clients, and a practical plan to turn your site into the calmest, most trustworthy
+      doorway to healing in Barrie and beyond.
+    </p>
+
+    <div class="cover-meta">
+      <div><span>Prepared for</span><b>Darlene J. Larocque — Founder, Master's Touch Women's Life Coaching</b></div>
+      <div><span>Prepared by</span><b>[Your Name] · [your@email.com] · [000-000-0000]</b></div>
+      <div><span>Scope</span><b>12 pages reviewed · live site + site configuration</b></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b class="bad">3</b><span>pages that are live but empty or leftover template content</span></div>
+      <div class="stat"><b class="bad">0</b><span>ways for a ready client to book &amp; pay you today</span></div>
+      <div class="stat"><b class="bad">0</b><span>testimonials, reviews or photos of your events anywhere</span></div>
+      <div class="stat"><b>5</b><span>professional credentials and 20+ years of experience — barely visible</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LETTER ============ -->
+<section id="letter">
+  <div class="wrap">
+    <p class="eyebrow">A note before the details</p>
+    <div class="grid g2" style="align-items:start">
+      <div>
+        <h2>Darlene, this review is written with respect.</h2>
+        <p>
+          I visited your site the way a hurting woman would — on a phone, late at night, hoping to find
+          someone safe. What I found was a warm voice, real credentials, and honest pricing. I also found
+          a booked-out-and-broken feeling: a "Book and pay for a session" button that leads to a blank page,
+          no way to reach you directly, and a yoga studio's pricing page still hiding inside your website.
+        </p>
+        <p>
+          None of that is a reflection of your ministry. It's what happens when a beautiful message is
+          carried by a website that was never finished.
+        </p>
+        <p>
+          So I've done two things. First, I've documented everything I found — plainly, with the exact
+          pages so you can check it yourself in five minutes. Second, I've sketched what the site could
+          become, and built a real design concept so you don't have to imagine it.
+        </p>
+        <p><strong>No obligation. The checklist is yours to keep either way.</strong></p>
+        <p class="muted small">— [Your Name]</p>
+      </div>
+      <div class="panel plum">
+        <h4 style="letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;color:var(--gold-soft)">The important part</h4>
+        <p style="font-family:var(--serif);font-size:1.32rem;line-height:1.45;color:#fff;margin:0">
+          "You survived what happened to you. Now it is time to heal, rebuild and rediscover
+          the woman God created you to be."
+        </p>
+        <p class="small" style="margin-top:20px;color:#D9CAD2">
+          That sentence is the best piece of marketing on your website. At the moment it's buried in the
+          middle of your homepage. It should be the first thing every woman reads. Most of what follows
+          is about arranging what you already have so the right woman feels seen in the first
+          four seconds.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section id="summary">
+  <div class="wrap">
+    <p class="eyebrow">The short version</p>
+    <h2>Five things costing you clients today</h2>
+    <p class="lead" style="max-width:70ch">
+      If you fix nothing else, fix these. Each one sits directly between a woman who has decided to
+      reach out — and you never knowing she came.
+    </p>
+
+    <div class="grid g2" style="margin-top:36px">
+      <div class="card">
+        <span class="card-num"><span class="badge b-p0">Critical</span></span>
+        <h3>1. Your "Book and pay" button leads to a blank page</h3>
+        <p>
+          On your coaching page, your three packages are priced at $65, $180 and $330. The button says
+          <strong>Book and pay for a session</strong>. It takes her to <span class="mono">/bookings</span>,
+          which displays only the word <em>"bOOKINGS"</em>.
+        </p>
+        <p class="muted small">A woman who has finally worked up the courage to pay you hits a wall. This is the single most expensive thing on your site.</p>
+      </div>
+      <div class="card">
+        <span class="card-num"><span class="badge b-p0">Critical</span></span>
+        <h3>2. There is no way to contact you</h3>
+        <p>
+          <span class="mono">/contact</span> doesn't exist. Your only form is buried on the
+          Bible-study page. Your phone number is invisible on mobile. And two different Gmail
+          addresses appear on your site.
+        </p>
+        <p class="muted small">One of those addresses is wrong — which means some women have already written to you and never heard back.</p>
+      </div>
+      <div class="card">
+        <span class="card-num"><span class="badge b-p0">Critical</span></span>
+        <h3>3. There's a yoga studio hiding in your website</h3>
+        <p>
+          <span class="mono">/joinnow</span> is live and advertising plans: <em>Free</em>,
+          <em>$15/mo Unlimited Yoga &amp; Meditation</em>, and a <em>$3,500 200-hr Teacher Training</em> —
+          leftover demo content from your template. There's also a blank About page and three
+          different "about" addresses.
+        </p>
+        <p class="muted small">A visitor who finds this will not trust the rest of the site. It reads as "abandoned."</p>
+      </div>
+      <div class="card">
+        <span class="card-num"><span class="badge b-p1">High</span></span>
+        <h3>4. Almost no one can find you on Google</h3>
+        <p>
+          Your site has no description, and several page titles are template leftovers —
+          "Store 2", "Blog 1", "bOOKINGS". Nowhere does the site clearly say
+          <strong>Barrie, Ontario</strong> in the places Google reads.
+        </p>
+        <p class="muted small">For "Christian counselling Barrie", other women in your own city rank on page one. You don't appear — despite stronger credentials than most of them.</p>
+      </div>
+      <div class="card" style="grid-column:1/-1">
+        <span class="card-num"><span class="badge b-p1">High</span></span>
+        <h3>5. You're asking for trust without offering proof</h3>
+        <p>
+          You are asking a woman who has been hurt to spend $65–$330 with you — and there isn't a single
+          testimonial, review, event photo, or client story on the entire website. No speaker page,
+          even though you're available for churches, shelters, retreats and conferences across Canada and
+          internationally. No mention of the 2016 edition of your book.
+        </p>
+        <p class="muted small">For this audience, proof is not decoration. It is the sale.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h4>The good news</h4>
+      <p style="margin:0">
+        Every one of these is fixable, and none of them require you to start over. This isn't a site that
+        needs to be thrown away — it's a site that needs to be <strong>finished and pointed in the right
+        direction</strong>. You already have the hard parts: a clear calling, rare training, a published
+        book, a monthly event, and words that make women feel seen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S WORKING ============ -->
+<section id="working">
+  <div class="wrap">
+    <p class="eyebrow">What's already strong</p>
+    <h2>The foundation is better than you think</h2>
+    <p class="lead" style="max-width:68ch">
+      I want to be specific about this, because the redesign should protect these things —
+      not replace them.
+    </p>
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card">
+        <h3>Your voice</h3>
+        <p>
+          "Heal from the past. Rediscover who you are. Move forward with purpose." Specific, dignified,
+          unafraid. It doesn't sound like a template — it sounds like someone who has been there.
+          Most coaching websites can't buy this.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Honest, well-built pricing</h3>
+        <p>
+          Three clear paths ($65 / $180 / $330) with the per-session math spelled out
+          ("That's $55 per session") and a defined six-step journey. That's more thoughtful than most
+          practitioners two decades in. It just needs a working door behind it.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Credentials most coaches don't have</h3>
+        <p>
+          Bachelor's in Christian Counselling, Women's Life Coaching certification, Trauma Healing
+          Practitioner, Trauma Counselling certification, Mental Health Coaching — plus real
+          frontline work as a Domestic Violence Counsellor in a women's shelter, and ordination.
+        </p>
+      </div>
+      <div class="card">
+        <h3>A monthly in-person gathering</h3>
+        <p>
+          The Women's Breakfast Breakthrough Sessions — first Saturday, 9 a.m.–noon, at 9 Innisfil Street,
+          free admission, a gift for the first three arrivals. This is a trust engine and a content
+          engine that almost no competitor has. It deserves to be a centrepiece, not a paragraph.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Isaiah 61:3 as a brand anchor</h3>
+        <p>
+          "A crown of beauty instead of ashes." You've already claimed it, and it is genuinely your
+          story. That should be the visual and emotional signature of the whole site.
+        </p>
+      </div>
+      <div class="card">
+        <h3>You keep showing up</h3>
+        <p>
+          Your pages were last updated within the past few weeks. You're actively working on this site.
+          What's missing isn't effort — it's a strategy layer and someone to catch the details.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIT ============ -->
+<section id="audit">
+  <div class="wrap">
+    <p class="eyebrow">The findings</p>
+    <h2>What I found, page by page</h2>
+    <p class="lead" style="max-width:70ch">
+      Everything below is verifiable. Every finding includes the exact address so you or anyone on your
+      team can check it in seconds.
+    </p>
+
+    <!-- A -->
+    <h3 style="margin-top:52px;font-size:1.42rem">A. Money leaks <span class="badge b-p0" style="vertical-align:middle;margin-left:8px">Critical</span></h3>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p0">P0</span>
+        <h3>The primary call-to-action is a dead end</h3>
+      </div>
+      <p>
+        The last button on your coaching page — the one a convinced buyer clicks — is
+        <strong>"BOOK AND PAY FOR A SESSION"</strong>. It points to <span class="mono">/bookings</span>.
+        That page contains a single heading and nothing else.
+      </p>
+      <p class="evidence">mtwlifecoach.com/bookings &nbsp;→&nbsp; "# bOOKINGS" &nbsp;(empty page, no payment, no form, no scheduler)</p>
+      <div class="why">
+        <b>Why it matters:</b> You have three price points and no way to take money. Every woman who
+        decides "yes" at 11 p.m. on a Tuesday simply leaves. There is also no online calendar, so booking
+        you depends entirely on a back-and-forth email — and, with the address problem below, some of
+        those emails never arrive.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p0">P0</span>
+        <h3>Two different email addresses are published on your site</h3>
+      </div>
+      <p>
+        Your blog post "Do you struggle with low self esteem?" tells readers to email
+        <span class="mono">mtwlifecoach@gmail.com</span>.
+        Your site's contact settings use <span class="mono">mtwlifwcoach@gmail.com</span>.
+        Only one can be correct.
+      </p>
+      <p class="evidence">blog post: mtwlifecoach@gmail.com &nbsp;|&nbsp; site settings: mtwlifwcoach@gmail.com</p>
+      <div class="why">
+        <b>Why it matters:</b> Whichever one is the typo, real women have written to an address that
+        doesn't exist — and you have no idea it happened. For someone whose first message often takes
+        weeks of courage, a silent bounce is a lost person, not just a lost sale.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p0">P0</span>
+        <h3>There is no Contact page — and your phone number is hidden from mobile visitors</h3>
+      </div>
+      <p>
+        <span class="mono">/contact</span> returns "We couldn't find the page you were looking for."
+        The only form on the site lives at the bottom of the Bible-study page. Your phone number is
+        stored in the site — but the mobile info bar that would display your email, phone, location and
+        hours is switched <strong>off for all four fields</strong>.
+      </p>
+      <p class="evidence">/contact → 404 &nbsp;|&nbsp; mobile info bar: email ✕ &nbsp; phone ✕ &nbsp; location ✕ &nbsp; hours ✕</p>
+      <div class="why">
+        <b>Why it matters:</b> Over 70% of visitors to a site like yours are on a phone. A woman in
+        crisis won't dig through a blog post to find out how to reach you. She needs a tap-to-call link
+        and a short form in the menu, in the footer, and at the end of every page.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Your business hours are set but never shown — and your address is missing</h3>
+      </div>
+      <p>
+        Monday–Thursday 9–4 and Friday 11–4 are saved in your settings, but there is no page or footer
+        that displays them. Meanwhile the only address on the site (9 Innisfil Street, Barrie) appears
+        inside a paragraph on the events page, not as a mapped, tappable location.
+      </p>
+      <div class="why">
+        <b>Why it matters:</b> For a local, in-person practice, name–address–phone consistency is how
+        Google decides to show you in local search — and how a woman decides you're real. Right now that
+        information exists but is invisible.
+      </div>
+    </div>
+
+    <!-- B -->
+    <h3 style="margin-top:56px;font-size:1.42rem">B. Broken and leftover pages <span class="badge b-p0" style="vertical-align:middle;margin-left:8px">Critical</span></h3>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p0">P0</span>
+        <h3>A yoga studio's pricing page is live on your Christian coaching website</h3>
+      </div>
+      <p>
+        <span class="mono">/joinnow</span> is published and titled "Join Now — Choose a practice plan."
+        It offers <strong>Free</strong>, <strong>$15/mo Unlimited Yoga &amp; Meditation</strong>, and a
+        <strong>$3,500 200-hr Teacher Training</strong> programme, with a "Learn more" link that goes to
+        Squarespace's own homepage.
+      </p>
+      <p class="evidence">/joinnow → "Choose a practice plan" · $15/mo Unlimited Yoga &amp; Meditation · $3,500 200-hr Teacher Training</p>
+      <div class="why">
+        <b>Why it matters:</b> This is template demo content that was never deleted. For a woman
+        evaluating whether you are safe and professional, discovering a $3,500 yoga course inside your
+        ministry site does real damage to trust — and it's the kind of thing a donor, church leader
+        or board member will notice immediately.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p0">P0</span>
+        <h3>Three "About" addresses — one blank, one orphaned, one showing your homepage</h3>
+      </div>
+      <p>
+        Your site has <span class="mono">/about</span>, <span class="mono">/about-1</span> and
+        <span class="mono">/about-2</span>. This is what each one does right now:
+      </p>
+      <div class="tablewrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Address</th><th>What a visitor sees</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">/about</td><td>Identical to your homepage — not an About page at all</td><td><span class="badge b-p0">Wrong</span></td></tr>
+            <tr><td class="mono">/about-1</td><td>A completely blank page</td><td><span class="badge b-p0">Empty</span></td></tr>
+            <tr><td class="mono">/about-2</td><td>Your real, excellent biography — full story, credentials, ministry, family</td><td><span class="badge b-p1">Orphaned</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="why" style="margin-top:18px">
+        <b>Why it matters:</b> The best-written page on your website — the one that would make a woman
+        trust you — is sitting at an address nobody would ever guess or link to. Your "About" page is
+        where the sale is actually made, and right now a visitor who clicks About gets the homepage again.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Template names and typos are visible in your page titles and menus</h3>
+      </div>
+      <ul class="plain">
+        <li>Your store's collection is called <strong>"Store 2"</strong> — and it appears in the browser tab of every product page.</li>
+        <li>The store's category heading reads <strong>"Clothng"</strong> (missing the "i").</li>
+        <li>Your blog is titled <strong>"Blog 1"</strong>.</li>
+        <li>The booking page reads <strong>"bOOKINGS"</strong> — an accidental capital in the middle of a word.</li>
+      </ul>
+      <div class="why">
+        <b>Why it matters:</b> These are the first words a visitor reads in their browser tab, in their
+        Google results, and when they share your link. Small errors on a site about healing read as
+        carelessness — the opposite of the feeling you're trying to create.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Your store advertises four categories — three of them are empty</h3>
+      </div>
+      <p>
+        Your shop's navigation offers <em>Mugs</em>, <em>Sweat Shirts</em>, <em>Hoodies</em> and
+        <em>Tees</em>. Three of those return "0 Results · No results found." All four products that do
+        exist are priced identically at $65.00.
+      </p>
+      <p class="evidence">/store/mugs → 0 Results &nbsp;|&nbsp; /store/hoodies → 0 Results &nbsp;|&nbsp; /store/tees → 0 Results</p>
+      <div class="why">
+        <b>Why it matters:</b> "No results found" is one of the most discouraging things a shopper can
+        see. Products also carry no reviews, no size guide, no shipping or return information, and
+        every garment shows the same flat mock-up — so a $65 sweatshirt has nothing to justify it but
+        a sentence about air-jet yarn.
+      </div>
+    </div>
+
+    <!-- C -->
+    <h3 style="margin-top:56px;font-size:1.42rem">C. Trust, proof and safety <span class="badge b-p1" style="vertical-align:middle;margin-left:8px">High</span></h3>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Not one testimonial, review or photo of your work</h3>
+      </div>
+      <p>
+        Across all twelve pages there is no client testimony, no review, no rating, no event gallery —
+        not even a photograph of a Breakfast Breakthrough Session. Product reviews are switched off
+        in your store settings.
+      </p>
+      <div class="why">
+        <b>Why it matters:</b> Your clients have to overcome shame, fear and years of being dismissed
+        before they contact you. The single most persuasive thing you can put on your site is another
+        woman saying "I was where you are, and this helped." You already have these words — they're
+        sitting in your inbox and in the room on the first Saturday of every month. They just
+        aren't on the website.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>You're available to speak internationally — with no speaker page</h3>
+      </div>
+      <p>
+        Your biography says you're available to speak in churches, prisons, women's shelters, retreats
+        and women's conferences across Canada, the United States and internationally. There is no
+        speaking page, no list of topics, no downloadable host sheet, no photo for event promotion and
+        no enquiry form.
+      </p>
+      <div class="why">
+        <b>Why it matters:</b> Speaking engagements are typically the highest-value bookings for someone
+        with your profile — and they lead to new coaching clients, book sales and group programmes.
+        Right now an event planner has no idea how to invite you.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Your book page is missing your first book</h3>
+      </div>
+      <p>
+        The page is titled "Books by Pastor Darlene" and shows one title — <em>In The Belly Of Hell</em> —
+        linking to Amazon. But the book also exists as the original 2016 edition,
+        <em>In the Belly of Hell (Master's Touch Healing Series, Volume 1)</em>, and there's no mention
+        of the series, no excerpt, no reader reviews and no back-cover description.
+      </p>
+      <div class="why">
+        <b>Why it matters:</b> A memoir like this is the most powerful lead magnet you own. A chapter
+        one sample, the five strongest reader reviews, and a clear "buy the book / book me to speak"
+        pairing would work far harder than a cover image and a button.
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>You're selling online with no policies — and you're doing trauma work without a scope note</h3>
+      </div>
+      <p>Three settings that should concern you:</p>
+      <ul class="plain">
+        <li><strong>No privacy policy, no terms of service, no return policy</strong> are configured for your store — while you're accepting payments and collecting names and email addresses.</li>
+        <li><strong>No cookie or privacy notice</strong> is enabled on the site.</li>
+        <li><strong>No scope-of-practice statement</strong> anywhere explaining that coaching is not therapy or counselling, plus crisis resources for a woman in immediate danger.</li>
+      </ul>
+      <div class="why">
+        <b>Why it matters, and I say this plainly:</b> In Canada, collecting personal information and
+        emailing a mailing list carry legal expectations (PIPEDA and CASL), and a store without published
+        policies weakens your position if there's ever a dispute. More importantly: you serve women
+        leaving abuse. A clear "coaching is not a substitute for therapy or emergency help" statement,
+        alongside a crisis line, is an act of care — and it makes you look <em>more</em> professional,
+        not less.
+      </div>
+    </div>
+
+    <div class="panel warn">
+      <h4>One more thing worth a quiet check</h4>
+      <p style="margin:0">
+        Your homepage displays the post-nominals <strong>CSW, CPC, BCC</strong>. Credentials are a
+        sincere strength of yours — but in Ontario some professional titles are protected by law, and
+        coaching itself is not regulated. Before any redesign, it's worth 20 minutes confirming that
+        each designation you display is one you're entitled to advertise, and that the way it's written
+        matches the certifying body's guidance. I'd rather raise it now, quietly, than have someone
+        else raise it later in a way that costs you. Consider it a footnote, not a criticism — this is
+        exactly the kind of detail a good web partner should be watching for.
+      </p>
+    </div>
+
+    <!-- D -->
+    <h3 style="margin-top:56px;font-size:1.42rem">D. Being found <span class="badge b-p1" style="vertical-align:middle;margin-left:8px">High</span></h3>
+
+    <div class="finding">
+      <div class="finding-head">
+        <span class="badge b-p1">P1</span>
+        <h3>Google has almost nothing to work with</h3>
+      </div>
+      <ul class="plain">
+        <li>Your site has <strong>no description at all</strong> — so search results show a bare title with no invitation to click.</li>
+        <li><strong>No page has a written meta description.</strong> Google is left to guess.</li>
+        <li>Page titles read <strong>"Store 2"</strong>, <strong>"Blog 1"</strong>, <strong>"bOOKINGS"</strong> — words no woman will ever type.</li>
+        <li><strong>No location keywords</strong> in headings or titles, even though Barrie, Ontario is your base and your events are in person.</li>
+        <li><strong>Image description processing is switched off</strong>, so photographs deliver no information to Google and none to screen readers.</li>
+        <li>Your <strong>blog has two posts</strong>, the most recent from October 2025 — and its title is "Blog 1".</li>
+      </ul>
+      <div class="why">
+        <b>Why it matters:</b> When I searched for a Christian counsellor or life coach for women in
+        Barrie, the first results were other practitioners with far thinner credentials than yours.
+        They simply have pages that tell Google what they do and where they do it. You don't — so women
+        looking for exactly what you offer are finding someone else. This is the quietest and most
+        expensive problem on the list.
+      </div>
+    </div>
+
+    <!-- E -->
+    <h3 style="margin-top:56px;font-size:1.42rem">E. Design &amp; experience <span class="badge b-p2" style="vertical-align:middle;margin-left:8px">Improve</span></h3>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>No visual identity holding it together</h3>
+        <p>
+          The site runs on default template styling with no custom font pairing or defined colour system —
+          so it looks like the template it started as rather than a ministry with a voice. Your logo is a
+          flat image file, and it's the only piece of branding a visitor sees.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Photography is inconsistent</h3>
+        <p>
+          Warm, personal photos from your events sit beside images that read as generic stock — and
+          several assets on your site are actually hosted on <em>other</em> Squarespace sites, including
+          a Facebook Messenger-generated image. If those accounts are ever changed, your images
+          break with them.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Everything leads to the same place</h3>
+        <p>
+          Your homepage offers four buttons — "Book a Clarity Session", "Explore Coaching",
+          "Books and Resources", "Breakfast Breakthrough Sessions" — and the first two go to the same
+          page. There's no clear hierarchy of "do this first."
+        </p>
+      </div>
+      <div class="card">
+        <h3>Copy that hasn't been proofed for the web</h3>
+        <p>
+          Long unbroken paragraphs, inconsistent capitalisation and emphasis (headings that are
+          sometimes italic, sometimes bold), "READY for something to change" where it should be
+          "you're ready", and no subheadings to help a distressed reader scan. The words are right;
+          the structure needs editing.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Images and loading</h3>
+        <p>
+          Several key images are large PNG files created from phone photos and screenshots rather than
+          properly compressed web images, and metadata processing is disabled. Converting these to modern
+          formats would make the site noticeably faster on a phone — which matters most to exactly the
+          visitor you want, sitting on mobile data.
+        </p>
+      </div>
+      <div class="card">
+        <h3>One social link, pointing at http</h3>
+        <p>
+          Only Instagram is connected, and it's still <span class="mono">http://</span> rather than
+          <span class="mono">https://</span>. Your Facebook group — where "You Are Enough Group Coaching"
+          actually lives — is only reachable through a small announcement bar at the very top of the site.
+        </p>
+      </div>
+    </div>
+
+    <!-- F -->
+    <h3 style="margin-top:56px;font-size:1.42rem">F. Opportunity you're leaving on the table <span class="badge b-p2" style="vertical-align:middle;margin-left:8px">Growth</span></h3>
+    <div class="grid g2">
+      <div class="card">
+        <span class="card-num">Biggest one</span>
+        <h3>"You Are Enough Group Coaching" is only a link to Facebook</h3>
+        <p>
+          Your announcement bar promises group coaching is "coming soon" — and sends women to a Facebook
+          group. There is no landing page, no explanation of what it is, no dates, no price and
+          <strong>no way to collect the names and email addresses of the women who are interested right
+          now.</strong> That interest is evaporating daily.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Your best writing isn't being used</h3>
+        <p>
+          "Your Identity in Christ" is a substantial, genuinely useful collection of scripture —
+          and it's a blog post nobody will find. As a free downloadable guide it could gather email
+          addresses every week, and as a printed handout it could serve every woman who walks into
+          your Saturday sessions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>No email list, no follow-up</h3>
+        <p>
+          There's one newsletter checkbox on one page, and no welcome sequence. With a monthly event and
+          a book, you have constant reasons to be in touch — and no system to do it.
+        </p>
+      </div>
+      <div class="card">
+        <h3>No measurement</h3>
+        <p>
+          There's no way to see which pages women actually read, where they leave, or whether the
+          buttons work. Every improvement after this becomes guesswork — unless we install it now.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISION ============ -->
+<section id="vision" style="background:linear-gradient(180deg,#FFFDF9,#FAF4EE)">
+  <div class="wrap">
+    <p class="eyebrow">The vision</p>
+    <h2>What this site could become</h2>
+    <p class="lead" style="max-width:68ch">
+      Not louder. Not flashier. <strong>Calmer, clearer and more trustworthy</strong> — a site that feels
+      like the first five minutes of a session with you.
+    </p>
+
+    <div class="panel" style="margin-top:34px">
+      <h4>Positioning in one line</h4>
+      <p style="font-family:var(--serif);font-size:1.28rem;line-height:1.5;margin:0;color:var(--plum)">
+        Faith-centred, trauma-informed life coaching for women who are ready to heal, rebuild and
+        rediscover who God created them to be — in Barrie, Ontario, and online across Canada.
+      </p>
+    </div>
+
+    <h3 style="margin-top:46px">A sitemap a woman can navigate while crying</h3>
+    <div class="ba" style="margin-top:22px">
+      <div class="ba-col before">
+        <h4>Now — 12 addresses, 6 of them broken or orphaned</h4>
+        <ul>
+          <li>Home (also answers at /about)</li>
+          <li>/about-1 — blank</li>
+          <li>/about-2 — the real bio, unlinked</li>
+          <li>/coaching — beautiful, ends in a dead end</li>
+          <li>/bookings — empty</li>
+          <li>/joinnow — yoga demo content</li>
+          <li>/store ("Store 2") — 3 of 4 categories empty</li>
+          <li>/blog ("Blog 1") — 2 posts</li>
+          <li>/my-book — 1 of 2 books</li>
+          <li>/womens-bible-studies — holds the only contact form</li>
+          <li>/contact — does not exist</li>
+          <li>No page for group coaching, speaking or testimonials</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <h4>Proposed — 9 pages, every one doing a job</h4>
+        <ul>
+          <li><strong>Home</strong> — who you help, how, and one obvious next step</li>
+          <li><strong>About Darlene</strong> — story, credentials, photos, scope-of-practice note</li>
+          <li><strong>Coaching</strong> — your three paths, with working booking &amp; payment</li>
+          <li><strong>Group Coaching</strong> — "You Are Enough", waitlist capture (new)</li>
+          <li><strong>Events</strong> — Breakfast Breakthrough, dates, location, free registration</li>
+          <li><strong>Resources</strong> — book(s), free identity guide, blog</li>
+          <li><strong>Speaker</strong> — topics, audiences, host kit, enquiry form (new)</li>
+          <li><strong>Shop</strong> — four categories that all have products, with reviews</li>
+          <li><strong>Contact</strong> — form, tap-to-call, hours, address, map, FAQ</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:52px">Brand direction: beauty from ashes, made visual</h3>
+    <p class="lead" style="max-width:66ch">Four decisions carry the whole feel.</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card">
+        <h3>Palette</h3>
+        <p>
+          Deep plum and warm ivory as the foundation — intimate, dignified, not clinical.
+          Sage green for calm and growth. A restrained gold for scriptural accents.
+          Soft blush for warmth. Nothing neon, nothing corporate, nothing "church clip-art."
+        </p>
+      </div>
+      <div class="card">
+        <h3>Typography</h3>
+        <p>
+          One elegant serif for headings — it reads like a letter from someone who cares —
+          paired with one clean, highly legible sans for body copy, because your reader is often
+          tired and on a phone. Large type, generous spacing, short paragraphs.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Imagery</h3>
+        <p>
+          Real women, real rooms, real light: your Saturday gatherings, your book, you. Warm and
+          unposed rather than stock. This is the fastest way to look like the safe place you actually are.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Voice</h3>
+        <p>
+          Keep yours. Second person, short sentences, no jargon, no "unlock your potential."
+          You already write like a human — that's a competitive advantage most coaches pay copywriters
+          to fake.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Signature line</h3>
+        <p>
+          <em>"You survived what happened to you. Now it's time to heal, rebuild and rediscover the
+          woman God created you to be."</em> — promoted from paragraph to hero headline.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Trust architecture</h3>
+        <p>
+          Credentials, the six-step journey, pricing with no surprises, a free 15-minute call,
+          and testimonials beside every ask. Proof at the exact moment doubt appears.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENHANCEMENTS ============ -->
+<section id="enhancements">
+  <div class="wrap">
+    <p class="eyebrow">The complete checklist</p>
+    <h2>Every enhancement, grouped</h2>
+    <p class="lead" style="max-width:70ch">
+      Twenty-six concrete improvements. Nothing here is theoretical — each item is something I would
+      build, write or fix for you.
+    </p>
+
+    <div style="margin-top:40px">
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">01</span><h3>Structure &amp; navigation</h3></div>
+        <ul class="plain">
+          <li>Rebuild the navigation around nine purposeful pages with one obvious primary action.</li>
+          <li>Delete or redirect the zombie pages: <span class="mono">/joinnow</span>, <span class="mono">/about-1</span>, and the duplicate <span class="mono">/about</span>.</li>
+          <li>Move your real biography to a proper <strong>About</strong> page at a clean address.</li>
+          <li>Rename "Store 2" → <strong>Shop</strong> and "Blog 1" → <strong>Journal / Resources</strong>.</li>
+          <li>Build a real <strong>Contact</strong> page: short form, tap-to-call, email, hours, address with map, friendly reply-time promise.</li>
+          <li>Add a footer to every page carrying contact details, hours, location and policy links.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">02</span><h3>Booking, payment &amp; conversion</h3></div>
+        <ul class="plain">
+          <li>Replace the empty <span class="mono">/bookings</span> page with real online scheduling and CAD payment — three products matching your three packages.</li>
+          <li>Add an intake form and confidentiality note to the booking flow, so her first five minutes with you are already safe.</li>
+          <li>Send booking confirmations and a warm reminder 24 hours before the session, automatically.</li>
+          <li>Add a <strong>free 15-minute clarity call</strong> so a hesitant woman has somewhere to start that costs nothing.</li>
+          <li>Sticky "Book a Clarity Session" button that follows her down every page.</li>
+          <li>Add a short "not sure which path?" guide that recommends Clarity, Renew &amp; Rebuild, or the six-session journey in three questions.</li>
+          <li>Build a thank-you page with a next step — your free identity guide and the newsletter.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">03</span><h3>Proof &amp; credibility</h3></div>
+        <ul class="plain">
+          <li>Gather and publish 6–10 testimonials — first name, city, and permission — placed beside every price and every button.</li>
+          <li>Add a credentials strip with your five training credentials plus your shelter experience, with the certification logos where permitted.</li>
+          <li>Publish a photo gallery from the Breakfast Breakthrough Sessions (with consent) — the single strongest proof that your work is real and happening.</li>
+          <li>Build a <strong>Speaker</strong> page: signature topics, audiences served, a photo event hosts can download, a short bio, and an enquiry form.</li>
+          <li>Add a clinic-style <strong>scope-of-practice and safety</strong> statement with crisis resources — protective for you and reassuring for her.</li>
+          <li>Publish privacy, terms, refund/cancellation policies and a cookie notice.</li>
+          <li>Set up and optimise a Google Business Profile for consistent name, address and phone; begin collecting Google reviews after each session.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">04</span><h3>Discoverability &amp; content</h3></div>
+        <ul class="plain">
+          <li>Write a compelling site description and a unique title + meta description for every page, using real search language — "Christian life coach for women in Barrie, Ontario", "trauma-informed faith-based coaching".</li>
+          <li>Add structured data (LocalBusiness, Person, Event, Product, Article) so Google understands who you are and what you offer.</li>
+          <li>Add descriptive alt text to every image — good for Google, essential for screen readers.</li>
+          <li>Rebuild the blog as a <strong>Journal</strong> with categories, an author bio, sharing, related posts and a newsletter invitation inside every article.</li>
+          <li>Turn each monthly Breakfast session into a blog post, an email and a social post — one evening's work, three weeks of content.</li>
+          <li>Repurpose "Your Identity in Christ" into a free downloadable guide — your lead magnet, and a handout for every woman who attends.</li>
+          <li>Install analytics and search-console tracking with goals on every button, so you can see what's working.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">05</span><h3>Shop &amp; products</h3></div>
+        <ul class="plain">
+          <li>Remove the empty categories or fill them — no visitor should ever see "No results found."</li>
+          <li>Photograph items on real people in warm light instead of flat mock-ups; add a size guide and true measurements.</li>
+          <li>Switch on product reviews and show a rating beside every item.</li>
+          <li>Publish shipping and return information, and default shipping to Canada (it's currently set to the United States).</li>
+          <li>Create a bundle — the book plus a garment — and add related products at checkout.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">06</span><h3>Speed, mobile &amp; accessibility</h3></div>
+        <ul class="plain">
+          <li>Compress and convert images to modern formats, size them properly and lazy-load, so the site is fast on a phone with poor signal.</li>
+          <li>Move every asset onto your own site — some images and a video are currently hosted on other Squarespace accounts and would vanish if those accounts change.</li>
+          <li>Test and refine every page at phone width: comfortable tap targets, readable type, no sideways scrolling.</li>
+          <li>Meet accessibility basics — contrast, focus outlines, heading order, alt text, and a form that can be completed by keyboard.</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><span class="badge b-plain">07</span><h3>Growth, once the foundation is solid</h3></div>
+        <ul class="plain">
+          <li>Build the <strong>"You Are Enough" group coaching page</strong> with a waitlist form — start collecting interested women this month.</li>
+          <li>Set up an email list with a warm, four-message welcome sequence and a monthly letter.</li>
+          <li>Put the group in your own online community rather than Facebook, where you own the relationship.</li>
+          <li>Add a referral invitation to the end of every coaching journey.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section id="beforeafter" style="background:linear-gradient(180deg,#FAF4EE,#FFFDF9)">
+  <div class="wrap">
+    <p class="eyebrow">Before &amp; after</p>
+    <h2>Two versions of the same invitation</h2>
+    <p class="lead" style="max-width:66ch">
+      Same woman, same words, same calling. Only the doorway changes.
+    </p>
+    <div class="ba" style="margin-top:32px">
+      <div class="ba-col before">
+        <h4>Today</h4>
+        <ul>
+          <li>She lands and reads a long paragraph before she learns who this is for.</li>
+          <li>Four buttons; two go to the same place.</li>
+          <li>"Book and pay for a session" → a blank page.</li>
+          <li>She wants to ask one question first. There's no contact page, and no phone number on her screen.</li>
+          <li>She looks for someone who has done this before. No testimonial, no review, no photo.</li>
+          <li>She searches your name later and finds a yoga course priced at $3,500.</li>
+          <li>She closes the tab. Nobody ever knows she came.</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <h4>Proposed</h4>
+        <ul>
+          <li>Within four seconds she reads: "You survived what happened to you. Now it's time to heal, rebuild and rediscover the woman God created you to be."</li>
+          <li>She sees herself in a short checklist: "You struggle with boundaries. You know God has more for your life."</li>
+          <li>She meets you — your face, your story, your five credentials, your time in the shelter.</li>
+          <li>Three clear paths with real prices, and a free 15-minute call if she's unsure.</li>
+          <li>She reads three women who felt exactly as she does now.</li>
+          <li>She books and pays in under two minutes, on her phone, and gets a warm confirmation.</li>
+          <li>She receives your free identity guide, and your monthly letter, and shows up on the first Saturday.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel plum" style="margin-top:38px">
+      <h4 style="letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;color:var(--gold-soft)">I didn't want to just describe it</h4>
+      <p style="color:#F0E7E2;margin-bottom:16px">
+        Alongside this document I've hand-built a working concept of your new homepage — real words,
+        real structure, real design direction, viewable on a phone or a laptop. Open
+        <strong>concept-home.html</strong> and see how it feels. It took me a day; imagine what a focused
+        four weeks would do.
+      </p>
+      <p class="small" style="color:#C9B8C0;margin:0">It's a design concept only — not a live site, and nothing you currently have was touched.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVESTMENT ============ -->
+<section id="investment">
+  <div class="wrap">
+    <p class="eyebrow">Investment</p>
+    <h2>Three ways we could work together</h2>
+    <p class="lead" style="max-width:66ch">
+      Start where it makes sense. Everything is in Canadian dollars, and everything is discussed before
+      anything is built.
+    </p>
+
+    <div class="pricing" style="margin-top:36px">
+      <div class="tier">
+        <h3>Foundation Fix</h3>
+        <p class="muted small" style="margin:0">"Stop the leaks." The fastest path from broken to trustworthy.</p>
+        <p class="price">$1,450 <small>one-time · CAD</small></p>
+        <ul>
+          <li>Replace the blank booking page with real scheduling and payment</li>
+          <li>New Contact page — form, tap-to-call, email, hours, address</li>
+          <li>Fix the email address conflict site-wide</li>
+          <li>Remove the yoga demo page and the blank About page</li>
+          <li>Fix titles, typos and the "Store 2" / "Blog 1" / "bOOKINGS" labels</li>
+          <li>Site description, page descriptions, alt text</li>
+          <li>Google Business Profile set-up</li>
+          <li>Delivered in about two weeks</li>
+        </ul>
+        <a class="btn btn-ghost" href="#next">Choose Foundation Fix</a>
+        <p class="note">Best if you want the critical problems solved immediately and would rather redesign later.</p>
+      </div>
+
+      <div class="tier featured">
+        <h3>Complete Redesign</h3>
+        <p class="muted small" style="margin:0">Everything above, plus a site that finally looks and feels like you.</p>
+        <p class="price">$4,900 <small>one-time · CAD</small></p>
+        <ul>
+          <li>Everything in Foundation Fix</li>
+          <li>Full custom design across all nine pages</li>
+          <li>Brand kit: palette, typography, imagery direction</li>
+          <li>Sitemap rebuilt; navigation and footer on every page</li>
+          <li>Homepage rewritten around your signature line</li>
+          <li>Testimonials, credentials and safety statement</li>
+          <li>Shop cleaned up — reviews, shipping, sizing, no empty categories</li>
+          <li>Journal rebuilt; free identity guide as a lead magnet</li>
+          <li>Speed and mobile optimisation, accessibility pass</li>
+          <li>Analytics with goals on every button</li>
+          <li>Delivered in about four to five weeks, with a walkthrough training session</li>
+        </ul>
+        <a class="btn btn-primary" href="#next">Choose Complete Redesign</a>
+        <p class="note">The option I'd recommend. It solves the leaks and builds the trust that turns visitors into clients.</p>
+      </div>
+
+      <div class="tier">
+        <h3>Brand &amp; Growth Partner</h3>
+        <p class="muted small" style="margin:0">Redesign, then a partner to grow it with you.</p>
+        <p class="price">$8,500 <small>one-time · CAD, then $450/month</small></p>
+        <ul>
+          <li>Everything in Complete Redesign</li>
+          <li>Group coaching landing page with waitlist</li>
+          <li>Speaker page and downloadable host kit</li>
+          <li>Email welcome sequence and monthly letter templates</li>
+          <li>90-day content plan mapped to your Saturday sessions</li>
+          <li>Launch campaign for your next event</li>
+          <li>Monthly partnership: updates, content, analytics report, priority support</li>
+        </ul>
+        <a class="btn btn-ghost" href="#next">Choose Growth Partner</a>
+        <p class="note">For when you want to fill the group programme and the speaking calendar, not just have a nice website.</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card">
+        <h4>Smaller, individual pieces</h4>
+        <ul class="plain" style="margin-bottom:0">
+          <li>Booking &amp; payment set-up — <strong>$450</strong></li>
+          <li>Lead magnet + email automation — <strong>$900</strong></li>
+          <li>Speaker page &amp; host kit — <strong>$750</strong></li>
+          <li>Testimonial collection &amp; full site polish — <strong>$500</strong></li>
+          <li>Monthly content writing — <strong>$400 per article</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>How I'd approach the platform</h4>
+        <p style="margin-bottom:0">
+          My honest advice: <strong>stay on Squarespace.</strong> You know it, you're already updating it,
+          and a migration would risk your existing content and Google history for no real gain right now.
+          Everything I've described above can be done well there. If, further down the road, you want
+          deeper automation — a members' area, a group programme platform, a podcast — that's the moment
+          to talk about a custom build. Not today. I'd rather save you money than sell you a migration.
+        </p>
+      </div>
+    </div>
+
+    <p class="note" style="max-width:none">
+      <strong>A note on these numbers:</strong> they're a starting point for conversation, not a final
+      quote, and I'm happy to stage the work — begin with Phase 1, and decide about the rest once you've
+      seen the difference. If budget is the obstacle, say so and we'll shape it; I would rather do this
+      properly in two stages than not at all.
+    </p>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="wrap">
+    <p class="eyebrow">How we'd work</p>
+    <h2>A calm, six-week path — you stay focused on coaching</h2>
+    <div class="phases" style="margin-top:30px">
+      <div class="phase">
+        <div class="wk">Week 1</div>
+        <div>
+          <h4>Discovery &amp; decisions</h4>
+          <p>One 90-minute call. We confirm your packages, your story details, what your clients actually say, and the handful of decisions only you can make. I do the rest.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="wk">Week 2</div>
+        <div>
+          <h4>Design direction</h4>
+          <p>You see the new homepage and one interior page designed — with your real words and real photos — and we refine the feeling together before anything is built.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="wk">Weeks 3–4</div>
+        <div>
+          <h4>Build &amp; write</h4>
+          <p>Every page is built, the copy is edited, booking and payment go live, the shop is cleaned up, and the old broken pages are retired or redirected.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="wk">Week 5</div>
+        <div>
+          <h4>Trust, search &amp; performance</h4>
+          <p>Testimonials, credentials, safety statement, policies, search descriptions, structured data, image optimisation, mobile and accessibility testing, analytics.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="wk">Week 6</div>
+        <div>
+          <h4>Launch &amp; handover</h4>
+          <p>We go live together, you get a recording and a short training session so you can make simple updates yourself, and I stay on hand for thirty days afterwards.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel sage" style="margin-top:34px">
+      <h4>A timely thought</h4>
+      <p style="margin:0">
+        Your next Women's Breakfast Breakthrough Session is <strong>Saturday, October 3</strong> at
+        9 Innisfil Street. It's the perfect moment to launch a working website: a page women can
+        register on, a way to capture every name and email in the room, and photographs that then carry
+        the site until November. If we start within the next week or two, we can be ready in time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT I NEED ============ -->
+<section id="needs">
+  <div class="wrap">
+    <p class="eyebrow">Your side of the table</p>
+    <h2>What I'd need from you — about three hours in total</h2>
+    <div class="grid g3" style="margin-top:30px">
+      <div class="card">
+        <h3>Access</h3>
+        <p>Contributor access to your Squarespace site, your domain registrar, your Google account (for the business profile and analytics), and your booking/email tools once chosen.</p>
+      </div>
+      <div class="card">
+        <h3>Content</h3>
+        <p>Any photos of your sessions, events and book. Copies of testimonials or the names of clients you can ask. Your policies, if you already have them — if not, I'll draft them for review.</p>
+      </div>
+      <div class="card">
+        <h3>Decisions</h3>
+        <p>Confirmation of your credentials and how you'd like them written, your current package pricing, and one clear decision on which coaching path is your flagship.</p>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:22px">
+      If you don't have something on this list — policies, testimonials, professional photography — that's
+      normal, and it's part of the work. I'll tell you exactly what I can handle and what I'll need you
+      to record or approve.
+    </p>
+  </div>
+</section>
+
+<!-- ============ NEXT STEP ============ -->
+<section id="next">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Fifteen minutes, and you'll know whether I can help.</h2>
+      <p style="margin-top:18px">
+        Bring this document to a short call. I'll open your site on screen, show you the blank booking
+        page and the yoga course myself, and walk you through the five fixes in plain language. No pitch
+        deck, no pressure, and no obligation to hire me.
+      </p>
+      <p>
+        <strong style="color:#fff">And whether or not you hire me:</strong> if you'd like, I'll fix the five
+        most urgent things on your site free of charge — the dead booking page, the missing contact page,
+        the yoga page, the email address, and the page titles. Consider it a gift to the work you do.
+      </p>
+      <div class="btnrow">
+        <a class="btn btn-gold" href="mailto:[your@email.com]?subject=Website%20review%20—%20let's%20talk&body=Hi%20[Your%20Name],%20I%20read%20your%20review%20of%20my%20site.%20Here's%20a%20good%20time%20to%20reach%20me:">Email me to book the call</a>
+        <a class="btn" style="border:1px solid rgba(255,255,255,.35);color:#fff" href="concept-home.html">See the homepage concept</a>
+      </div>
+      <p class="small" style="margin-top:26px;color:#C6B6BE">
+        [Your Name] &nbsp;·&nbsp; [your@email.com] &nbsp;·&nbsp; [000-000-0000] &nbsp;·&nbsp; [yourwebsite.com]
+      </p>
+    </div>
+
+    <div class="quote" style="margin:74px auto 0">
+      "To bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning,
+      and a garment of praise instead of a spirit of despair."
+      <cite>Isaiah 61:3</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPENDIX ============ -->
+<section id="appendix">
+  <div class="wrap">
+    <p class="eyebrow">Appendix</p>
+    <h2>The full checklist, prioritised</h2>
+    <p class="lead" style="max-width:66ch">
+      If you'd rather hand this to someone else, or work through it slowly yourself, here it is in order
+      of what I'd do first.
+    </p>
+
+    <div class="tablewrap" style="margin-top:30px">
+      <table>
+        <thead>
+          <tr><th style="width:80px">Priority</th><th>What needs doing</th><th style="width:118px">Where</th><th style="width:96px">Effort</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Replace the empty booking page with real scheduling and CAD payment for all three packages</td><td class="mono">/bookings</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Confirm the correct email address and remove the other one from everywhere it appears</td><td class="mono">site-wide</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Create the missing Contact page with form, tap-to-call phone, hours, address and map</td><td class="mono">/contact</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Delete or redirect the yoga "practice plan" demo page</td><td class="mono">/joinnow</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Delete the blank About page and give the real biography a proper, linked home</td><td class="mono">/about-1 · /about-2</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p0">P0</span></td><td>Make <span class="mono">/about</span> a genuine About page instead of a copy of the homepage</td><td class="mono">/about</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Switch on the mobile info bar: email, phone, location, hours</td><td class="mono">settings</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Write the site description and a unique title + description for every page</td><td class="mono">site-wide</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Fix the labels "Store 2", "Blog 1", "bOOKINGS", "Clothng"</td><td class="mono">site-wide</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Hide or fill the three empty shop categories</td><td class="mono">/store/*</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Collect and publish six to ten client testimonials beside every price</td><td class="mono">site-wide</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Publish privacy, terms, refund policies and a cookie notice</td><td class="mono">site-wide</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Add the scope-of-practice statement and crisis resources</td><td class="mono">site-wide</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Verify all displayed credentials, including CSW / CPC / BCC</td><td class="mono">site-wide</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Set up and optimise the Google Business Profile; begin collecting Google reviews</td><td class="mono">off-site</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Add alt text to every image and enable image metadata processing</td><td class="mono">site-wide</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p1">P1</span></td><td>Default the shop shipping country to Canada instead of the United States</td><td class="mono">/store</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Add the free 15-minute clarity call and a "not sure which path?" guide</td><td class="mono">/coaching</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Build the "You Are Enough" group coaching page with an email waitlist</td><td class="mono">new</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Build the Speaker page with topics and a host kit</td><td class="mono">new</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Turn "Your Identity in Christ" into a downloadable lead magnet</td><td class="mono">new</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Compress and convert all images; move externally hosted assets onto your own site</td><td class="mono">site-wide</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Switch on product reviews, related products and express checkout</td><td class="mono">/store</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Add both editions of the book, with reviews and a sample chapter</td><td class="mono">/my-book</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Set up the email list with a four-message welcome sequence</td><td class="mono">new</td><td>Medium</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Install analytics with goals on every button</td><td class="mono">new</td><td>Quick</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Publish a monthly article built from each Breakfast session</td><td class="mono">/blog</td><td>Ongoing</td></tr>
+          <tr><td><span class="badge b-p2">P2</span></td><td>Point the Instagram link at https and connect your other profiles</td><td class="mono">site-wide</td><td>Quick</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:56px">Questions you might have</h3>
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card">
+        <h4>Will I lose my content or my Google history?</h4>
+        <p>No. Everything that works stays, and every page you've ranked for is redirected properly so nothing is lost. Your blog posts, your book page and your pricing all survive — they simply get rehoused.</p>
+      </div>
+      <div class="card">
+        <h4>Do I have to learn something new?</h4>
+        <p>No. We stay on Squarespace, which you already use. I'll record a short session showing you how to make everyday changes — a new event date, a new blog post, a new testimonial.</p>
+      </div>
+      <div class="card">
+        <h4>What if I'm not ready for the whole redesign?</h4>
+        <p>Then do the Foundation Fix. In two weeks your site stops losing people, and you can decide about the rest when you've seen what changes.</p>
+      </div>
+      <div class="card">
+        <h4>What if I can't afford it right now?</h4>
+        <p>Tell me. We can stage it, spread it over a few months, or start with only the free fixes and the booking page. I'd rather build a long relationship than lose you over timing.</p>
+      </div>
+      <div class="card">
+        <h4>Can I make changes myself afterwards?</h4>
+        <p>Yes, and I'd want you to. I'll hand over cleanly: an editable site, a short guide, and support for thirty days after launch.</p>
+      </div>
+      <div class="card">
+        <h4>How do you handle the testimonials, given privacy?</h4>
+        <p>Carefully. First name and city only, written permission for each one, no identifying detail, and any story that could expose someone is generalised or left out. Your clients' safety comes before marketing.</p>
+      </div>
+    </div>
+
+    <p class="muted small" style="margin-top:36px">
+      <strong>How I reviewed the site:</strong> I read all twelve published pages, reviewed the site's own
+      configuration and store settings, checked the sitemap, tested the primary call-to-action paths as a
+      visitor would, and compared how the site appears in search results against other Christian
+      counselling and coaching practices serving Barrie. Every finding above can be verified by visiting
+      the address shown beside it. This document is confidential and was prepared for Darlene J. Larocque.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid g3">
+      <div>
+        <h4>Prepared by</h4>
+        <p class="small" style="margin:0">
+          [Your Name]<br>
+          [your@email.com]<br>
+          [000-000-0000]<br>
+          [yourwebsite.com]
+        </p>
+      </div>
+      <div>
+        <h4>Prepared for</h4>
+        <p class="small" style="margin:0">
+          Darlene J. Larocque, CSW, CPC, BCC<br>
+          Founder, Master's Touch Women's Life Coaching<br>
+          Barrie, Ontario, Canada
+        </p>
+      </div>
+      <div>
+        <h4>Status</h4>
+        <p class="small" style="margin:0">
+          Review &amp; proposal, September 2026.<br>
+          No obligation. The checklist is yours to keep.<br>
+          <a href="#top">Back to the top</a>
+        </p>
+      </div>
+    </div>
+    <p class="fine">
+      This document contains no confidential information belonging to any client. Client testimonials
+      referenced are examples to be gathered with written permission. Pricing shown is a starting
+      point for discussion and not a binding quotation. Some recommendations — particularly those
+      concerning professional titles and stored policies — should be confirmed with the relevant
+      certifying body or a legal advisor before publication.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

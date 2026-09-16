@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heal. Rebuild. Rediscover. — Master's Touch Women's Life Coaching | Design Concept</title>
+<meta name="description" content="Faith-centred, trauma-informed life coaching for women in Barrie, Ontario and online across Canada. Design concept by [Your Name].">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FDFAF5;
+    --cream:#F7F1E8;
+    --white:#FFFFFF;
+    --plum:#4B2E45;
+    --plum-dk:#2E1B29;
+    --plum-soft:#6B4A63;
+    --sage:#7C8F7A;
+    --sage-lt:#E8EDE6;
+    --gold:#BE9E5C;
+    --gold-lt:#E6D6B2;
+    --blush:#F3E5DE;
+    --ink:#31262F;
+    --body:#544852;
+    --muted:#7C7078;
+    --line:#E9E0D3;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--ivory);color:var(--body);
+    font-family:var(--sans);font-size:17px;line-height:1.75;font-weight:400;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  img.img-fail{opacity:0}
+  a{color:var(--plum)}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  h1,h2,h3,h4{font-family:var(--serif);color:var(--plum-dk);font-weight:500;line-height:1.15;margin:0 0 .45em;letter-spacing:-.005em}
+  h1{font-size:clamp(2.5rem,6.2vw,4.4rem);line-height:1.06}
+  h2{font-size:clamp(1.9rem,4vw,3rem)}
+  h3{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+  h4{font-size:1.12rem}
+  p{margin:0 0 1.15em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .narrow{max-width:720px;margin-left:auto;margin-right:auto}
+  .center{text-align:center}
+  .lead{font-size:clamp(1.06rem,1.5vw,1.22rem);color:var(--body);line-height:1.7}
+  .eyebrow{
+    font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+    color:var(--sage);margin:0 0 20px;display:block;
+  }
+  .eyebrow.gold{color:var(--gold)}
+  .rule{width:56px;height:1px;background:var(--gold);margin:26px auto}
+
+  /* ---------- Concept ribbon ---------- */
+  .ribbon{
+    background:#1F1620;color:#D9C9D3;font-size:12.5px;letter-spacing:.04em;
+    text-align:center;padding:9px 20px;position:relative;z-index:60;
+  }
+  .ribbon b{color:var(--gold-lt);font-weight:600}
+
+  /* ---------- Announcement ---------- */
+  .announce{
+    background:linear-gradient(90deg,var(--plum-dk),var(--plum) 55%,var(--plum-dk));
+    color:#F0E4EA;text-align:center;padding:12px 24px;font-size:14px;letter-spacing:.02em;
+  }
+  .announce a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+  .announce a:hover{color:#fff}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:55;background:rgba(253,250,245,.93);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:26px;padding:15px 30px;max-width:var(--maxw);margin:0 auto}
+  .logo{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
+  .logo img{width:46px;height:46px;object-fit:contain;border-radius:50%;background:var(--cream)}
+  .logo .lt{min-width:0}
+  .logo .lt b{display:block;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--plum-dk);line-height:1.15;white-space:nowrap}
+  .logo .lt span{display:block;font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:var(--muted)}
+  .links{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500}
+  .links a{color:var(--ink);text-decoration:none;padding:3px 0;border-bottom:1px solid transparent;transition:border-color .18s,color .18s}
+  .links a:hover{color:var(--plum);border-color:var(--gold)}
+  .links a.active{color:var(--plum);border-color:var(--gold)}
+  .hdr-cta{display:flex;align-items:center;gap:16px}
+  @media(max-width:1000px){.links{display:none}}
+  @media(max-width:620px){.hdr-cta .btn{display:none}}
+
+  /* mobile menu */
+  details.mob{display:none;position:relative}
+  @media(max-width:1000px){details.mob{display:block}}
+  details.mob summary{
+    list-style:none;cursor:pointer;width:44px;height:44px;border-radius:12px;
+    border:1px solid var(--line);display:grid;place-items:center;background:var(--white);
+  }
+  details.mob summary::-webkit-details-marker{display:none}
+  details.mob summary .bars{display:block;width:18px;height:12px;position:relative}
+  details.mob summary .bars::before,details.mob summary .bars::after{
+    content:"";position:absolute;left:0;width:100%;height:1.6px;background:var(--plum);
+  }
+  details.mob summary .bars::before{top:0}details.mob summary .bars::after{bottom:0}
+  details.mob[open] .mobpanel{opacity:1;transform:none;pointer-events:auto}
+  .mobpanel{
+    position:absolute;right:0;top:54px;width:246px;background:var(--white);
+    border:1px solid var(--line);border-radius:16px;padding:14px;
+    box-shadow:0 20px 50px rgba(46,27,41,.16);display:flex;flex-direction:column;gap:2px;
+    opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease);
+  }
+  .mobpanel a{padding:11px 14px;border-radius:10px;text-decoration:none;color:var(--ink);font-size:15px;font-weight:500}
+  .mobpanel a:hover{background:var(--cream);color:var(--plum)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.01em;
+    padding:15px 30px;border-radius:100px;text-decoration:none;border:1px solid transparent;
+    transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s;
+    white-space:nowrap;cursor:pointer;
+  }
+  .btn-plum{background:var(--plum);color:#fff;box-shadow:0 10px 26px rgba(75,46,69,.24)}
+  .btn-plum:hover{background:var(--plum-dk);transform:translateY(-2px);box-shadow:0 16px 34px rgba(75,46,69,.3)}
+  .btn-gold{background:var(--gold);color:#2A1E19;box-shadow:0 10px 26px rgba(190,158,92,.3)}
+  .btn-gold:hover{background:#AB8C4C;transform:translateY(-2px)}
+  .btn-out{background:transparent;color:var(--plum);border-color:rgba(75,46,69,.32)}
+  .btn-out:hover{background:var(--blush);border-color:var(--plum)}
+  .btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn-light:hover{background:rgba(255,255,255,.12);border-color:#fff}
+  .btn-sm{padding:12px 22px;font-size:14px}
+  .btnrow{display:flex;flex-wrap:wrap;gap:15px;align-items:center}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 460px at 84% -6%,rgba(190,158,92,.20),transparent 64%),
+      radial-gradient(660px 420px at 6% 8%,rgba(124,143,122,.16),transparent 62%),
+      linear-gradient(172deg,#FFFDFA 0%,var(--ivory) 44%,#F4EDE4 100%);
+    padding:96px 0 84px;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:66px;align-items:center}
+  @media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:44px}.hero{padding:62px 0 56px}}
+  .hero h1{max-width:15ch}
+  .hero h1 em{font-style:italic;color:var(--plum);font-weight:400}
+  .hero .lead{max-width:52ch;margin-top:4px}
+  .hero-note{font-size:14px;color:var(--muted);margin-top:22px;display:flex;align-items:center;gap:10px}
+  .hero-note svg{flex:0 0 auto}
+  .portrait{
+    position:relative;border-radius:400px 400px 26px 26px;overflow:hidden;
+    background:linear-gradient(170deg,var(--blush),var(--sage-lt));
+    border:1px solid var(--line);box-shadow:0 30px 70px rgba(46,27,41,.16);
+  }
+  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%}
+  .portrait::after{
+    content:"";position:absolute;inset:11px;border:1px solid rgba(190,158,92,.5);
+    border-radius:392px 392px 18px 18px;pointer-events:none;
+  }
+  .badge-float{
+    position:absolute;left:-14px;bottom:26px;background:var(--white);border:1px solid var(--line);
+    border-radius:16px;padding:14px 20px;box-shadow:0 18px 44px rgba(46,27,41,.14);max-width:230px;
+  }
+  .badge-float b{display:block;font-family:var(--serif);font-size:27px;color:var(--plum);line-height:1}
+  .badge-float span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+  @media(max-width:520px){.badge-float{left:0;padding:12px 16px}}
+
+  /* ---------- Credential strip ---------- */
+  .creds{background:var(--plum-dk);color:#D6C6CF;padding:20px 0}
+  .creds .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 40px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+  .creds span{position:relative;padding-left:18px}
+  .creds span::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* ---------- Sections ---------- */
+  section{padding:96px 0}
+  .sec-cream{background:var(--cream)}
+  .sec-white{background:var(--white)}
+  .sec-plum{background:linear-gradient(165deg,var(--plum-dk),#3A2333 60%,var(--plum-dk));color:#E3D6DE}
+  .sec-plum h2,.sec-plum h3{color:#fff}
+  .sec-plum .eyebrow{color:var(--gold-lt)}
+  @media(max-width:720px){section{padding:64px 0}}
+
+  .hdr-block{max-width:760px;margin:0 auto 56px;text-align:center}
+  .hdr-block p{color:var(--body)}
+  @media(max-width:720px){.hdr-block{margin-bottom:40px}}
+
+  /* ---------- Check list ---------- */
+  .checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(298px,1fr));gap:16px}
+  .check{
+    display:flex;gap:15px;align-items:flex-start;background:var(--white);
+    border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+    transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s;
+  }
+  .check:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(46,27,41,.09);border-color:var(--gold-lt)}
+  .check .tick{
+    flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--sage-lt);
+    display:grid;place-items:center;margin-top:3px;
+  }
+  .check p{margin:0;font-size:15.3px;line-height:1.55;color:var(--body)}
+  .checks-note{
+    text-align:center;margin-top:40px;font-family:var(--serif);font-size:1.28rem;font-style:italic;color:var(--plum);
+  }
+
+  /* ---------- Pillars ---------- */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:22px}
+  .pillar{
+    background:var(--white);border:1px solid var(--line);border-radius:18px;padding:34px 30px;
+    transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s;
+  }
+  .pillar:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(46,27,41,.1);border-color:var(--gold-lt)}
+  .pillar .ic{
+    width:48px;height:48px;border-radius:14px;background:var(--cream);
+    display:grid;place-items:center;margin-bottom:20px;
+  }
+  .pillar h4{font-family:var(--serif);font-size:1.32rem;font-weight:600;margin-bottom:8px}
+  .pillar p{font-size:15.3px;margin:0;line-height:1.65}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
+  @media(max-width:980px){.about-grid{grid-template-columns:1fr;gap:40px}}
+  .arch{border-radius:340px 340px 22px 22px;overflow:hidden;border:1px solid var(--line);background:var(--cream);box-shadow:0 26px 60px rgba(46,27,41,.14)}
+  .arch img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 0}
+  .chip{
+    font-size:12.5px;font-weight:500;letter-spacing:.03em;background:var(--white);
+    border:1px solid var(--line);border-radius:100px;padding:7px 15px;color:var(--plum-soft);
+  }
+  .signature{font-family:var(--serif);font-size:1.5rem;font-style:italic;color:var(--plum);margin-top:26px}
+  .signature small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-top:8px}
+
+  /* ---------- Quote ---------- */
+  .bigquote{
+    font-family:var(--serif);font-size:clamp(1.4rem,3.1vw,2.2rem);line-height:1.42;font-style:italic;
+    text-align:center;max-width:22ch;margin:0 auto;color:#fff;font-weight:400;
+  }
+  .bigquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);margin-top:26px}
+
+  /* ---------- Pricing ---------- */
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;align-items:stretch}
+  .path{
+    background:var(--white);border:1px solid var(--line);border-radius:20px;padding:36px 30px;
+    display:flex;flex-direction:column;position:relative;
+    transition:transform .22s var(--ease),box-shadow .22s var(--ease);
+  }
+  .path:hover{transform:translateY(-5px);box-shadow:0 24px 54px rgba(46,27,41,.12)}
+  .path.feat{border:1.5px solid var(--gold);box-shadow:0 26px 60px rgba(46,27,41,.14)}
+  .path.feat::before{
+    content:"Most chosen";position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:var(--gold);color:#2A1E19;font-size:10.5px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;padding:6px 16px;border-radius:100px;white-space:nowrap;
+  }
+  .path .leaf{font-size:18px;color:var(--sage);letter-spacing:.2em}
+  .path h3{margin:12px 0 4px;font-size:1.5rem}
+  .path .amt{font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--plum);line-height:1;margin:16px 0 6px}
+  .path .amt sup{font-size:1rem;vertical-align:super;font-weight:500;letter-spacing:.06em;margin-left:3px}
+  .path .sub{font-size:13.5px;color:var(--muted)}
+  .path .desc{font-size:15.3px;margin-top:20px;line-height:1.62}
+  .path ul{list-style:none;margin:0 0 26px;padding:0;font-size:15px;flex:1}
+  .path li{position:relative;padding:8px 0 8px 24px;border-top:1px solid #F4EFE7}
+  .path li:first-child{border-top:0;padding-top:4px}
+  .path li::before{content:"";position:absolute;left:2px;top:.98em;width:8px;height:4px;border-left:1.6px solid var(--sage);border-bottom:1.6px solid var(--sage);transform:rotate(-45deg)}
+  .path .btn{width:100%}
+  .unsure{
+    margin-top:34px;background:var(--blush);border:1px dashed rgba(190,158,92,.6);border-radius:18px;
+    padding:26px 30px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;
+  }
+  .unsure p{margin:0;font-size:15.6px;max-width:56ch}
+  .unsure b{color:var(--plum)}
+
+  /* ---------- Event ---------- */
+  .event{display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center}
+  @media(max-width:900px){.event{grid-template-columns:1fr;gap:36px}}
+  .event .when{
+    display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.1);
+    border:1px solid rgba(230,214,178,.4);border-radius:100px;padding:9px 20px;
+    font-size:13.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:24px;
+  }
+  .event h2{color:#fff}
+  .event .details{list-style:none;padding:0;margin:26px 0 0;font-size:16px}
+  .event .details li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.13);color:#DCCFD7}
+  .event .details li:last-child{border-bottom:0}
+  .event .details b{color:#fff;font-weight:600;min-width:96px;display:inline-block}
+  .flier{
+    border-radius:18px;overflow:hidden;border:1px solid rgba(230,214,178,.35);
+    box-shadow:0 30px 66px rgba(0,0,0,.34);background:rgba(255,255,255,.06);
+  }
+  .flier img{width:100%;object-fit:cover}
+  .free-tag{
+    display:inline-block;background:var(--gold);color:#2A1E19;font-size:11px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:20px;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:24px}
+  .q{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:32px 30px;position:relative}
+  .q .mark{font-family:var(--serif);font-size:60px;color:var(--gold-lt);line-height:.7;display:block;margin-bottom:14px}
+  .q p{font-size:16px;line-height:1.68;font-style:italic;color:var(--ink)}
+  .q .who{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+  .q .who b{color:var(--plum);font-weight:600}
+  .q.placeholder{background:#FCFAF6;border-style:dashed;border-color:#DED3C3}
+  .q .ph-note{
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
+    font-weight:600;margin-bottom:14px;display:block;
+  }
+  .q.placeholder p{font-style:normal;color:var(--muted);font-size:15px}
+
+  /* ---------- Book ---------- */
+  .book{display:grid;grid-template-columns:.72fr 1.28fr;gap:56px;align-items:center}
+  @media(max-width:860px){.book{grid-template-columns:1fr;gap:38px}}
+  .cover3d{
+    border-radius:6px;overflow:hidden;box-shadow:-16px 26px 54px rgba(46,27,41,.26),0 4px 12px rgba(46,27,41,.14);
+    transform:perspective(1400px) rotateY(-9deg);transition:transform .5s var(--ease);background:var(--cream);max-width:330px;
+  }
+  .cover3d:hover{transform:perspective(1400px) rotateY(0deg) translateY(-6px)}
+
+  /* ---------- Newsletter ---------- */
+  .news{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media(max-width:860px){.news{grid-template-columns:1fr;gap:32px}}
+  .form{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .form input{
+    flex:1 1 240px;padding:15px 20px;border-radius:100px;border:1px solid var(--line);
+    font-family:var(--sans);font-size:15px;background:var(--white);color:var(--ink);min-width:0;
+  }
+  .form input::placeholder{color:#A79AA2}
+  .form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(190,158,92,.16)}
+  .tiny{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+  /* ---------- Final CTA ---------- */
+  .final{padding:0}
+  .finalwrap{
+    background:linear-gradient(150deg,var(--plum-dk),#241522 70%);color:#E5D8E0;
+    border-radius:26px;padding:72px 56px;text-align:center;position:relative;overflow:hidden;
+  }
+  .finalwrap::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 320px at 50% 0%,rgba(190,158,92,.22),transparent 70%);
+  }
+  .finalwrap > *{position:relative}
+  .finalwrap h2{color:#fff;max-width:20ch;margin:0 auto .3em}
+  .finalwrap p{max-width:58ch;margin:0 auto 1em;color:#D5C6CF}
+  .finalwrap .btnrow{justify-content:center;margin-top:32px}
+  @media(max-width:720px){.finalwrap{padding:48px 26px;border-radius:20px}}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:#241722;color:#B7A8B1;padding:74px 0 40px;margin-top:96px}
+  footer.site h4{color:#fff;font-family:var(--serif);font-size:1.15rem;margin-bottom:16px}
+  footer.site a{color:#D9C6D2;text-decoration:none;border-bottom:1px solid transparent}
+  footer.site a:hover{color:var(--gold-lt);border-color:var(--gold)}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:44px}
+  @media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px}}
+  @media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+  .fgrid ul{list-style:none;padding:0;margin:0;font-size:14.5px}
+  .fgrid li{margin-bottom:11px;line-height:1.5}
+  .fgrid p{font-size:14.5px;line-height:1.65}
+  .polices{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13px;margin-top:22px}
+  .fbottom{
+    margin-top:50px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:12.5px;color:#8F8189;
+  }
+  .safety{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;
+    padding:20px 24px;margin-top:26px;font-size:13.5px;line-height:1.65;color:#BEAEB7;
+  }
+  .safety b{color:#E6D6B2}
+
+  /* ---------- Designer's notes ---------- */
+  .notes{background:#F1E9DF;border-top:1px solid var(--line);padding:64px 0}
+  .notes h3{text-align:center;margin-bottom:8px}
+  .notes .sub{text-align:center;color:var(--muted);font-size:15px;margin-bottom:40px}
+  .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:14px}
+  .nitem{
+    background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+    font-size:14.6px;line-height:1.6;
+  }
+  .nitem b{color:var(--plum);display:block;margin-bottom:4px;font-size:14px}
+
+  @media print{
+    .ribbon,.announce,details.mob,.btnrow{display:none}
+    section{padding:30px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== CONCEPT RIBBON ===== -->
+<div class="ribbon">
+  <b>Design concept</b> — this is not the live site. A proposed homepage for Master's Touch Women's Life Coaching, built by <b>[Your Name]</b>.
+</div>
+
+<!-- ===== ANNOUNCEMENT ===== -->
+<div class="announce">
+  <strong>You Are Enough</strong> group coaching opens this fall &nbsp;·&nbsp;
+  <a href="#paths">Join the waitlist</a>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#top">
+      <img src="https://images.squarespace-cdn.com/content/v1/6802d71b6925a433d1afac76/daf0dd4e-9395-48bf-ba2d-293e9a2eb851/1000121079.png"
+           alt="Master's Touch Women's Life Coaching" onerror="this.classList.add('img-fail')">
+      <span class="lt">
+        <b>Master's Touch</b>
+        <span>Women's Life Coaching</span>
+      </span>
+    </a>
+
+    <div class="links">
+      <a href="#about">About Darlene</a>
+      <a href="#paths" class="active">Coaching</a>
+      <a href="#paths">Group Coaching</a>
+      <a href="#events">Events</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hdr-cta">
+      <a class="btn btn-plum btn-sm" href="#paths">Book a Clarity Session</a>
+      <details class="mob">
+        <summary aria-label="Open menu"><span class="bars"></span></summary>
+        <div class="mobpanel">
+          <a href="#about">About Darlene</a>
+          <a href="#paths">Coaching</a>
+          <a href="#paths">Group Coaching</a>
+          <a href="#events">Events</a>
+          <a href="#book">Book</a>
+          <a href="#contact">Contact</a>
+          <a href="#paths" style="background:var(--plum);color:#fff;text-align:center;margin-top:6px">Book a Clarity Session</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Faith-centred · Trauma-informed · Barrie, Ontario &amp; online</span>
+        <h1>You survived what happened to you. Now it's time to <em>heal, rebuild and rediscover</em>.</h1>
+        <p class="lead">
+          Compassionate, faith-centred life coaching for women who are ready to move beyond what has held
+          them back — and rediscover the woman God created them to be.
+        </p>
+        <div class="btnrow" style="margin-top:34px">
+          <a class="btn btn-plum" href="#paths">Book a Clarity Session — $65</a>
+          <a class="btn btn-out" href="#about">Meet Darlene</a>
+        </div>
+        <p class="hero-note">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Not sure yet? A free 15-minute call is a gentle place to start.
+        </p>
+      </div>
+
+      <div class="portrait">
+        <img src="https://images.squarespace-cdn.com/content/v1/6802d71b6925a433d1afac76/b4aea28d-6f5f-4f7d-8599-caf2cfa6ba31/1000121285.png"
+             alt="Darlene J. Larocque, founder and women's life coach"
+             onerror="this.classList.add('img-fail')">
+        <div class="badge-float">
+          <b>20+ years</b>
+          <span>Walking with women through trauma, healing and freedom in Christ.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CREDENTIALS ===== -->
+<div class="creds">
+  <div class="wrap">
+    <span>BA Christian Counselling</span>
+    <span>Trauma Healing Practitioner</span>
+    <span>Mental Health Coaching</span>
+    <span>Ordained Minister</span>
+    <span>Published Author</span>
+  </div>
+</div>
+
+<!-- ===== DOES THIS SOUND LIKE YOU ===== -->
+<section class="sec-cream">
+  <div class="wrap">
+    <div class="hdr-block">
+      <span class="eyebrow">You may be in the right place if</span>
+      <h2>Does this sound like you?</h2>
+      <p class="lead">You don't have to have everything figured out before you begin.</p>
+    </div>
+
+    <div class="checks">
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You've been through trauma, abuse, rejection or painful relationships — and you're ready to move forward.</p>
+      </div>
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You've lost confidence in yourself and want to rediscover your worth and identity.</p>
+      </div>
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You struggle with boundaries or unhealthy patterns in your relationships.</p>
+      </div>
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You carry shame about things that were done to you, not by you.</p>
+      </div>
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You know God has more for your life, but you're unsure how to move forward.</p>
+      </div>
+      <div class="check">
+        <span class="tick" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#54685A" stroke-width="3.4"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <p>You're in a season of change, loss or new beginnings and need clarity and direction.</p>
+      </div>
+    </div>
+
+    <p class="checks-note">"Sometimes the first step is simply deciding that you're ready for something to change."</p>
+  </div>
+</section>
+
+<!-- ===== PILLARS ===== -->
+<section class="sec-white">
+  <div class="wrap">
+    <div class="hdr-block">
+      <span class="eyebrow">What we can work on together</span>
+      <h2>Six gentle, practical places to begin</h2>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M12 21s-7-4.6-7-10a5 5 0 019-3 5 5 0 019 3c0 5.4-7 10-7 10z"/></svg></div>
+        <h4>Identity &amp; self-worth</h4>
+        <p>Rediscover your value, strengthen your confidence, and embrace who you were created to be.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M4 12h16M4 7h16M4 17h10"/></svg></div>
+        <h4>Healthy boundaries</h4>
+        <p>Recognise unhealthy patterns and develop the skills needed to build healthier, more fulfilling relationships.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.3 9.4l6.1-.8z"/></svg></div>
+        <h4>Confidence</h4>
+        <p>Move beyond self-doubt and develop the confidence to make decisions and move forward.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M4 18c4-1 5-5 5-9M20 18c-4-1-5-5-5-9M9 9l3-4 3 4"/></svg></div>
+        <h4>Life transitions</h4>
+        <p>Navigate seasons of change, loss or new beginnings with greater clarity and direction.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M12 3v18M6 9h12"/></svg></div>
+        <h4>Faith &amp; purpose</h4>
+        <p>Deepen your faith, discover your God-given purpose, and take intentional steps toward the life ahead.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C8F7A" stroke-width="1.7"><path d="M12 4c3 3 5 5.5 5 8.5A5 5 0 017 12.5C7 9.5 9 7 12 4z"/></svg></div>
+        <h4>Healing from trauma</h4>
+        <p>Understand how past experiences shape the present, and begin rebuilding in a safe, unhurried way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec-cream" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="arch">
+        <img src="https://images.squarespace-cdn.com/content/v1/6802d71b6925a433d1afac76/b4aea28d-6f5f-4f7d-8599-caf2cfa6ba31/1000121285.png"
+             alt="Darlene J. Larocque" onerror="this.classList.add('img-fail')">
+      </div>
+      <div>
+        <span class="eyebrow">Meet Darlene</span>
+        <h2>I understand what it means to rebuild a life.</h2>
+        <p>
+          I'm Darlene J. Larocque, founder of Master's Touch Women's Life Coaching. I'm a Holy
+          Spirit-led Women's Life Coach who helps women heal from painful experiences, rebuild their
+          confidence and self-worth, and move forward with clarity and purpose.
+        </p>
+        <p>
+          I understand that trauma, rejection, abuse and unhealthy relationships can leave a woman
+          questioning her value and losing sight of who she truly is. My desire is to provide a safe,
+          compassionate and faith-centred space where women feel heard, supported and empowered.
+        </p>
+        <p>
+          I believe two of the greatest barriers to healing are an inaccurate view of God and an
+          inaccurate view of ourselves. When those beliefs are renewed through Scripture, practical
+          tools and compassionate support, lasting transformation becomes possible. And I don't simply
+          teach what I've studied — I also know what it means to walk through adversity and discover
+          that your past does not have the final word.
+        </p>
+
+        <div class="chips">
+          <span class="chip">BA Christian Counselling</span>
+          <span class="chip">Women's Life Coaching Certification — HisCoach</span>
+          <span class="chip">Trauma Healing Practitioner</span>
+          <span class="chip">Trauma Counselling</span>
+          <span class="chip">Mental Health Coaching — Light University</span>
+          <span class="chip">Former Domestic Violence Counsellor</span>
+          <span class="chip">Ordained Minister</span>
+        </div>
+
+        <p class="signature">
+          "One touch from the Master can transform your pain into purpose."
+          <small>Darlene J. Larocque, CSW, CPC, BCC &nbsp;·&nbsp; Founder &amp; Women's Life Coach</small>
+        </p>
+        <div class="btnrow" style="margin-top:26px">
+          <a class="btn btn-out" href="#paths">Work with me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCRIPTURE ===== -->
+<section class="sec-plum" style="padding:88px 0">
+  <div class="wrap">
+    <p class="bigquote">
+      "To bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning,
+      and a garment of praise instead of a spirit of despair."
+      <cite>Isaiah 61:3</cite>
+    </p>
+  </div>
+</section>
+
+<!-- ===== PRICING / PATHS ===== -->
+<section class="sec-white" id="paths">
+  <div class="wrap">
+    <div class="hdr-block">
+      <span class="eyebrow">Choose your coaching path</span>
+      <h2>Three ways to begin</h2>
+      <p class="lead">
+        Every path is private, unhurried, and grounded in Scripture and practical tools.
+        If you're unsure which fits, start with a Clarity Session.
+      </p>
+    </div>
+
+    <div class="paths">
+      <div class="path">
+        <span class="leaf" aria-hidden="true">🌿</span>
+        <h3>Clarity Session</h3>
+        <p class="amt"><sup>CAD $</sup>65</p>
+        <p class="sub">One 60-minute private session</p>
+        <p class="desc">
+          A focused one-on-one conversation to identify what may be keeping you stuck and begin
+          developing practical next steps.
+        </p>
+        <ul>
+          <li>Facing a decision or transition</li>
+          <li>Struggling with confidence or self-worth</li>
+          <li>Difficulty with boundaries</li>
+          <li>Feeling stuck, unsure of the next step</li>
+        </ul>
+        <a class="btn btn-out" href="#contact">Book this session</a>
+      </div>
+
+      <div class="path feat">
+        <span class="leaf" aria-hidden="true">🌿</span>
+        <h3>Renew &amp; Rebuild</h3>
+        <p class="amt"><sup>CAD $</sup>180</p>
+        <p class="sub">Three 60-minute private sessions · $60 per session</p>
+        <p class="desc">
+          One conversation brings clarity. Lasting change takes intentionality. We go deeper into one
+          area of your life over three sessions.
+        </p>
+        <ul>
+          <li><strong>Session 1 — Discover:</strong> where you are, what's holding you</li>
+          <li><strong>Session 2 — Rebuild:</strong> patterns, beliefs, boundaries</li>
+          <li><strong>Session 3 — Move forward:</strong> practical next steps</li>
+        </ul>
+        <a class="btn btn-plum" href="#contact">Book this journey</a>
+      </div>
+
+      <div class="path">
+        <span class="leaf" aria-hidden="true">🌿</span>
+        <h3>Heal · Rebuild · Rediscover</h3>
+        <p class="amt"><sup>CAD $</sup>330</p>
+        <p class="sub">Six 60-minute private sessions · $55 per session</p>
+        <p class="desc">
+          For the woman ready to go deeper — toward greater confidence, healthier relationships,
+          stronger boundaries and a renewed understanding of who she is.
+        </p>
+        <ul>
+          <li>Heal &amp; become aware</li>
+          <li>Rediscover your identity</li>
+          <li>Rebuild confidence</li>
+          <li>Establish healthy boundaries</li>
+          <li>Build healthier relationships</li>
+          <li>Move forward with purpose</li>
+        </ul>
+        <a class="btn btn-out" href="#contact">Begin the six-session journey</a>
+      </div>
+    </div>
+
+    <div class="unsure">
+      <p>
+        <b>Not sure which path is right?</b> Book a free 15-minute call. No cost, no pressure —
+        just a gentle conversation about where you'd like to begin.
+      </p>
+      <a class="btn btn-gold" href="#contact">Free 15-minute call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENTS ===== -->
+<section class="sec-plum" id="events">
+  <div class="wrap">
+    <div class="event">
+      <div>
+        <span class="free-tag">Free admission</span>
+        <h2>Women's Breakfast Breakthrough Sessions</h2>
+        <p style="color:#D5C6CF;max-width:52ch">
+          Hosted by Master's Touch Healing International Ministries. A welcoming, safe space for women
+          to enjoy fellowship over light refreshments while growing in their relationship with God and
+          experiencing His healing presence — through biblical teaching, practical application and
+          meaningful discussion.
+        </p>
+
+        <ul class="details">
+          <li><b>When</b><span>First Saturday of every month · 9:00 a.m. – 12:00 noon</span></li>
+          <li><b>Next</b><span>Saturday, October 3 · doors open at 9 a.m. sharp</span></li>
+          <li><b>Where</b><span>9 Innisfil Street, Barrie, Ontario</span></li>
+          <li><b>Cost</b><span>Free — registration helps us prepare refreshments and seating</span></li>
+          <li><b>Little gift</b><span>The first three women to arrive early receive something special</span></li>
+        </ul>
+
+        <div class="btnrow" style="margin-top:32px">
+          <a class="btn btn-gold" href="#contact">Reserve your seat</a>
+          <a class="btn btn-light" href="#contact">Ask a question</a>
+        </div>
+      </div>
+
+      <div class="flier">
+        <img src="https://images.squarespace-cdn.com/content/v1/6802d71b6925a433d1afac76/0b810acf-c266-447a-bed3-e31e6f7d6145/1000123518.png"
+             alt="Women's Breakfast Breakthrough Sessions gathering" onerror="this.classList.add('img-fail')">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="sec-cream">
+  <div class="wrap">
+    <div class="hdr-block">
+      <span class="eyebrow">In their words</span>
+      <h2>What women say after working together</h2>
+      <p class="lead">The words below would come from your own clients, with written permission.</p>
+    </div>
+
+    <div class="quotes">
+      <div class="q placeholder">
+        <span class="ph-note">Placeholder — your client's words</span>
+        <span class="mark" aria-hidden="true">"</span>
+        <p>
+          A short, honest quote from a woman describing what changed for her — confidence, boundaries,
+          a relationship with God, a decision she was finally able to make.
+        </p>
+        <p class="who"><b>First name, city</b><br>Clarity Session · with permission</p>
+      </div>
+      <div class="q placeholder">
+        <span class="ph-note">Placeholder — your client's words</span>
+        <span class="mark" aria-hidden="true">"</span>
+        <p>
+          Ideally one about feeling safe. For this audience, "I felt safe enough to tell the truth"
+          converts better than any promise of transformation.
+        </p>
+        <p class="who"><b>First name, city</b><br>Renew &amp; Rebuild · with permission</p>
+      </div>
+      <div class="q placeholder">
+        <span class="ph-note">Placeholder — your client's words</span>
+        <span class="mark" aria-hidden="true">"</span>
+        <p>
+          A longer quote about the six-session journey works beautifully here, or a video testimonial —
+          the highest-trust asset a coaching practice can own.
+        </p>
+        <p class="who"><b>First name, city</b><br>Six-session journey · with permission</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOK ===== -->
+<section class="sec-white" id="book">
+  <div class="wrap">
+    <div class="book">
+      <div class="cover3d">
+        <img src="https://images.squarespace-cdn.com/content/v1/6802d71b6925a433d1afac76/0c83fd24-d44d-427c-a260-4b4f517ed573/processed_1000104493.jpg"
+             alt="In The Belly Of Hell by Darlene Larocque" onerror="this.classList.add('img-fail')">
+      </div>
+      <div>
+        <span class="eyebrow">Books &amp; resources</span>
+        <h2>In The Belly Of Hell</h2>
+        <p class="lead">
+          A raw, powerful and unflinching journey into the depths of despair — and the miraculous
+          light of redemption.
+        </p>
+        <p>
+          Told with brutal honesty and unshakable faith, this is more than a memoir. It's a testimony of
+          divine rescue, spiritual transformation, and the unbreakable human spirit. Pastor Darlene's
+          journey will speak to anyone who has faced abuse, struggled with faith, or wondered if God
+          truly sees them.
+        </p>
+        <div class="btnrow" style="margin-top:28px">
+          <a class="btn btn-plum" href="https://www.amazon.ca/Belly-Hell-Darlene-Larocque/dp/B0FP2ST869/" target="_blank" rel="noopener">Buy on Amazon</a>
+          <a class="btn btn-out" href="#contact">Invite Darlene to speak</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="sec-cream">
+  <div class="wrap">
+    <div class="news">
+      <div>
+        <span class="eyebrow">Stay close</span>
+        <h2>A short letter each month</h2>
+        <p style="margin-bottom:0">
+          Encouragement for the season you're in, Scripture to hold onto, and the date of our next
+          Breakfast Breakthrough Session. No noise, and you can leave any time.
+        </p>
+      </div>
+      <div>
+        <form class="form" onsubmit="return false">
+          <label class="sr" for="email">Email address</label>
+          <input id="email" type="email" placeholder="Your email address" required>
+          <button class="btn btn-plum" type="submit">Send it to me</button>
+        </form>
+        <p class="tiny">
+          And as a thank-you, you'll receive <strong>Your Identity in Christ</strong> — a free guide to
+          the Scriptures that declare who you are in Him.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final" id="contact">
+  <div class="wrap">
+    <div class="finalwrap">
+      <h2>You don't have to carry this alone.</h2>
+      <p>
+        Whether you're ready to book a session, curious about the group programme, or simply have a
+        question — you're welcome to reach out. Every message is read personally.
+      </p>
+      <p style="color:#C6B4BF;font-size:14.5px">
+        Or call directly: <a href="tel:+16477022461" style="color:var(--gold-lt)">(647) 702-2461</a> ·
+        Monday to Thursday 9–4, Friday 11–4
+      </p>
+      <div class="btnrow">
+        <a class="btn btn-gold" href="#paths">Book a Clarity Session — $65</a>
+        <a class="btn btn-light" href="#paths">Free 15-minute call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Master's Touch Women's Life Coaching</h4>
+        <p>
+          Faith-centred, trauma-informed life coaching for women who are ready to heal, rebuild and
+          rediscover who God created them to be. In person in Barrie, Ontario, and online across Canada.
+        </p>
+        <p style="margin:0">
+          <a href="mailto:hello@mtwlifecoach.com">hello@mtwlifecoach.com</a><br>
+          <a href="tel:+16477022461">(647) 702-2461</a>
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Darlene</a></li>
+          <li><a href="#paths">Coaching</a></li>
+          <li><a href="#paths">Group Coaching</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#book">Book</a></li>
+          <li><a href="#contact">Speaking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Monday – Thursday<br>9:00 a.m. – 4:00 p.m.</li>
+          <li>Friday<br>11:00 a.m. – 4:00 p.m.</li>
+          <li>Saturday – Sunday<br>By appointment only</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit &amp; connect</h4>
+        <p style="margin-bottom:12px">
+          9 Innisfil Street<br>
+          Barrie, Ontario, Canada
+        </p>
+        <ul>
+          <li><a href="https://instagram.com/masterstouchlifecoach" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#paths">"You Are Enough" group waitlist</a></li>
+          <li><a href="#events">Breakfast Breakthrough registration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="safety">
+      <b>A gentle note on care:</b> Life coaching is not therapy, counselling or crisis support, and it is
+      not a substitute for medical or mental-health treatment. If you are in immediate danger, please
+      call 911. In Canada, you can reach a crisis responder 24/7 by calling or texting
+      <b>9-8-8</b>, and women leaving violence can contact <b>Shelternet</b> or their local shelter.
+    </div>
+
+    <div class="polices">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund &amp; Cancellation Policy</a>
+      <a href="#">Accessibility</a>
+    </div>
+
+    <div class="fbottom">
+      <span>© 2026 Master's Touch Women's Life Coaching. All rights reserved.</span>
+      <span>Homepage design concept prepared by [Your Name] · [your@email.com]</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== DESIGNER'S NOTES ===== -->
+<section class="notes">
+  <div class="wrap">
+    <h3>What this concept changes</h3>
+    <p class="sub">Fourteen decisions, each one aimed at a specific thing that's costing you clients today.</p>
+    <div class="ngrid">
+      <div class="nitem"><b>Your signature line leads</b> The strongest sentence on your site is now the headline instead of a paragraph halfway down.</div>
+      <div class="nitem"><b>She sees herself in four seconds</b> A "does this sound like you?" checklist turns a long paragraph into recognition.</div>
+      <div class="nitem"><b>Proof appears before the ask</b> Credentials sit directly under the hero, above any price or button.</div>
+      <div class="nitem"><b>One obvious next step</b> The main button is repeated in the header, the hero, the pricing section and the footer — and it always works.</div>
+      <div class="nitem"><b>A no-cost way in</b> The free 15-minute call gives a hesitant woman somewhere safe to start.</div>
+      <div class="nitem"><b>"Most chosen" guidance</b> Three paths are no longer equal — the middle one is recommended, which reduces decision paralysis.</div>
+      <div class="nitem"><b>Prices in CAD, stated plainly</b> No ambiguity for a Canadian client, and per-session math is kept because it's honest and effective.</div>
+      <div class="nitem"><b>Your monthly event becomes a centrepiece</b> Date, address, hours and free admission — with a register button instead of a buried paragraph.</div>
+      <div class="nitem"><b>A real contact destination</b> Phone, email, hours, address and a form — all in one place, tappable on a phone.</div>
+      <div class="nitem"><b>Testimonials built in</b> Three slots, positioned exactly where doubt appears. Marked as placeholders so nobody mistakes them for real quotes.</div>
+      <div class="nitem"><b>Group coaching is a page, not a Facebook link</b> The announcement bar now leads somewhere with a waitlist — so interest can be captured instead of lost.</div>
+      <div class="nitem"><b>Your free guide earns the email</b> "Your Identity in Christ" becomes a downloadable — the same content you already wrote, working every week.</div>
+      <div class="nitem"><b>Your book does more work</b> Both a "buy" and a "invite me to speak" action from the same section.</div>
+      <div class="nitem"><b>Care, stated out loud</b> A scope-of-practice and crisis note in the footer — protective for you, reassuring for her, and the most professional thing on the page.</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
