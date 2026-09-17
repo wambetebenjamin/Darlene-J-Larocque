@@ -8346,7 +8346,7 @@ h1, h2, h3, h4, h5,
         z-index: 0; }
       @media (max-width: 1199.98px) {
         .owl-carousel.home-slider .slider-item {
-          background-position: center center !important; } }
+          background-position: center top !important; } }
       .owl-carousel.home-slider .slider-item .slider-text {
         height: 700px;
         position: relative; }
