@@ -1,3 +1,4 @@
-# Confidential client proposal — please do not index.
+# Public website for Master's Touch Women's Life Coaching.
+# The proposal and concept documents carry their own noindex meta tags.
 User-agent: *
-Disallow: /
+Allow: /
